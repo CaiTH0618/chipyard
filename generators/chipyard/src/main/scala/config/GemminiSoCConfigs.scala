@@ -4,6 +4,9 @@ import org.chipsalliance.cde.config.Config
 import gemmini.{GemminiCustomConfig, GemminiCustomConfigs}
 
 class CustomGemminiSoCConfig extends Config(
+  // Improve sim speed by removing TileLink monitors
+  new freechips.rocketchip.subsystem.WithoutTLMonitors ++
+
   new gemmini.GemminiCustomConfig ++
 
   // Set your custom L2 configs
