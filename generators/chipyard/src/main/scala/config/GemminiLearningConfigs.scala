@@ -9,7 +9,7 @@ class GemminiLearningConfigBasic extends Config(
 
   new gemmini.DefaultGemminiConfig ++
 
-  new freechips.rocketchip.rocket.WithNSmallCores(1) ++
+  new freechips.rocketchip.rocket.WithNBigCores(1) ++
   new chipyard.config.WithSystemBusWidth(128) ++
   new chipyard.config.AbstractConfig
 )
@@ -27,7 +27,7 @@ class GemminiLearningConfigWithScratchpad extends Config(
 
   new gemmini.DefaultGemminiConfig ++
 
-  new freechips.rocketchip.rocket.WithNSmallCores(1) ++
+  new freechips.rocketchip.rocket.WithNBigCores(1) ++
   new chipyard.config.WithSystemBusWidth(128) ++
   new chipyard.config.AbstractConfig
 )
