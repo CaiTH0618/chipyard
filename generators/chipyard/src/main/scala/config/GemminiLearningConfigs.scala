@@ -44,9 +44,34 @@ class GemminiLearningConfigWithScratchpad extends Config(
   // Remove the default Scratchpad in `AbstractConfig`
   new testchipip.soc.WithNoScratchpads() ++
 
-  new gemmini.DefaultGemminiConfig ++
+  // Select a set of tileId/hardId and instantiate one gemmini to each of them.
+  new chipyard.config.WithMultiRoCCGemmini(
+    // Select a set of tileId.
+    // 0
+    0, 1, 2, 3
+  )(
+   gemmini.GemminiConfigs.defaultConfig.copy(
+      // The `dma_buswidth` should be at least the same as system bus width.
+      // dma_buswidth = 64,
+      dma_buswidth = 128,
+      // dma_buswidth = 256,
+      // dma_buswidth = 512,
+    )
+  ) ++
+  // Enable different RoCCs based on the tileId
+  new chipyard.config.WithMultiRoCC ++
 
+  // new freechips.rocketchip.rocket.WithNHugeCores(1) ++
   new freechips.rocketchip.rocket.WithNHugeCores(4) ++
+
+  // new chipyard.config.WithSystemBusWidth(64) ++
   new chipyard.config.WithSystemBusWidth(128) ++
+  // new chipyard.config.WithSystemBusWidth(256) ++
+  // new chipyard.config.WithSystemBusWidth(512) ++
+
+  new freechips.rocketchip.subsystem.WithInclusiveCache(
+    capacityKB = 64,
+    // capacityKB = 512,
+  ) ++
   new chipyard.config.AbstractConfig
 )
