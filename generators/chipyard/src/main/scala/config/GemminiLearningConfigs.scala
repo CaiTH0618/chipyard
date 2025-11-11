@@ -26,6 +26,8 @@ class GemminiLearningConfigWithScratchpad extends Config(
     busWhere = SBUS,
     base = 0xC0000000L, 
     size = 1 << 20,  // 1MB
+    // banks = 1,
+    // banks = 2,
     banks = 4,
     subBanks = 1,
     buffer = BufferParams(8),
@@ -36,6 +38,8 @@ class GemminiLearningConfigWithScratchpad extends Config(
     busWhere = MBUS,
     base = 0x08000000L, 
     size = 1 << 20,  // 1MB
+    // banks = 1,
+    // banks = 2,
     banks = 4,
     subBanks = 1,
     buffer = BufferParams(8),
