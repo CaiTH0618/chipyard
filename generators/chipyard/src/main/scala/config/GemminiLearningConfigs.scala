@@ -84,12 +84,12 @@ class GemminiLearningConfigSpad extends Config(
         enable = true,
         global_base_addr = BigInt("F0000000", 16),
         local_size_bytes = 1024 * 1024,
-        // local_banks = 1,
-        local_banks = 4,
+        local_banks = 1,
+        // local_banks = 4,
         // local_bank_interleaved_bytes = 64,
         // local_bank_interleaved_bytes = 256 * 1024,
-        local_bank_beat_bytes = 16,
-        // local_bank_beat_bytes = 64,
+        // local_bank_beat_bytes = 16,
+        local_bank_beat_bytes = 64,
       )
     )
   ) ++
@@ -98,13 +98,13 @@ class GemminiLearningConfigSpad extends Config(
 
   // Set CPU cores
   new freechips.rocketchip.rocket.WithNBigCores(4) ++
+  // This will set the banking factor of L2 cache.
+  new freechips.rocketchip.subsystem.WithNBanks(4) ++
   // Set L2 cache.
   new freechips.rocketchip.subsystem.WithInclusiveCache(
     nWays = 16,
-    capacityKB = 128,
+    capacityKB = 64,
   ) ++
-  // This will set the banking factor of L2 cache.
-  new freechips.rocketchip.subsystem.WithNBanks(4) ++
   // Set the width of system bus
   new chipyard.config.WithSystemBusWidth(16 * 8) ++
   // Set number of memory channels.
@@ -187,10 +187,10 @@ class GemminiLearningConfigSpadNoC extends Config (
   new chipyard.config.WithMultiRoCC ++
   // Set CPU cores
   new freechips.rocketchip.rocket.WithNBigCores(4) ++
-  // Set L2 cache.
-  new freechips.rocketchip.subsystem.WithInclusiveCache() ++
   // This will set the banking factor of L2 cache.
   new freechips.rocketchip.subsystem.WithNBanks(4) ++
+  // Set L2 cache.
+  new freechips.rocketchip.subsystem.WithInclusiveCache() ++
   // Set the width of system bus
   new chipyard.config.WithSystemBusWidth(16 * 8) ++
   // Set number of memory channels.
