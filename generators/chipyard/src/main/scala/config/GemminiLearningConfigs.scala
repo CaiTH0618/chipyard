@@ -18,6 +18,10 @@ class GemminiLearningConfigBasic extends Config(
 
   new gemmini.DefaultGemminiConfig(
     gemmini.GemminiConfigs.defaultConfig.copy(
+      // meshRows = 16,
+      meshRows = 64,
+      // meshColumns = 16,
+      meshColumns = 64,
       // dma_buswidth = 4 * 8,
       // dma_buswidth = 16 * 8,
       dma_buswidth = 64 * 8,
@@ -26,7 +30,8 @@ class GemminiLearningConfigBasic extends Config(
         enable = true,
         global_base_addr = BigInt("F0000000", 16),
         local_size_bytes = 256 * 1024,
-        local_banks = 4,
+        local_banks = 1,
+        // local_banks = 4,
         local_bank_interleaved_bytes = 64,
         // local_bank_interleaved_bytes = 64 * 1024,
         // local_bank_beat_bytes = 8,
