@@ -272,7 +272,7 @@ if run_step "6"; then
         pushd $CYDIR/sims/firesim &&
         (
             set -e # Subshells un-set "set -e" so it must be re enabled
-            source sourceme-manager.sh --skip-ssh-setup
+            source ./sourceme-manager.sh --skip-ssh-setup
             pushd sim
             # avoid directly building classpath s.t. target-injected files can be recompiled
             make sbt SBT_COMMAND="compile"
@@ -321,6 +321,7 @@ if run_step "10"; then
 	echo "Downloading CIRCT from nightly build"
 
 	git submodule update --init $CYDIR/tools/install-circt &&
+        (perl -0777 -i.bak -pe 's{wget -O - https://github.com/llvm/circt/releases/download/\$OPT_VERSION/\$OPT_FILENAME \| tar -zx -C \$OPT_INSTALL_DIR/ --strip-components 1}{curl -fsSL https://github.com/llvm/circt/releases/download/\$OPT_VERSION/\$OPT_FILENAME | tar -zx -C \$OPT_INSTALL_DIR/ --strip-components 1}s' tools/install-circt/bin/download-release-or-nightly-circt.sh) && 
 	    $CYDIR/tools/install-circt/bin/download-release-or-nightly-circt.sh \
 		-f circt-full-static-linux-x64.tar.gz \
 		-i $PREFIX \
