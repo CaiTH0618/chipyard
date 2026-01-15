@@ -86,20 +86,12 @@ safe_fetch() {
 checkout_npu_dev_in_dir() {
   local dir="$1"
   print "Attempting to checkout npu/dev in $dir"
-  git -C "$dir" fetch --all --prune
   if git -C "$dir" show-ref --verify --quiet refs/heads/npu/dev; then
     git -C "$dir" checkout npu/dev
     print "Checked out existing local branch npu/dev in $dir"
   else
-    if git -C "$dir" ls-remote --exit-code origin refs/heads/npu/dev >/dev/null 2>&1; then
-      git -C "$dir" checkout -b npu/dev origin/npu/dev
-      print "Created and checked out npu/dev from origin/npu/dev in $dir"
-    elif git -C "$dir" ls-remote --exit-code upstream refs/heads/npu/dev >/dev/null 2>&1; then
-      git -C "$dir" checkout -b npu/dev upstream/npu/dev
-      print "Created and checked out npu/dev from upstream/npu/dev in $dir"
-    else
-      print "Branch npu/dev not found on origin or upstream in $dir; skipping"
-    fi
+    git -C "$dir" checkout -b npu/dev origin/npu/dev
+    print "Created and checked out npu/dev from origin/npu/dev in $dir"
   fi
 }
 
