@@ -115,10 +115,10 @@ set_remote "generators/gemmini/software/gemmini-rocc-tests" origin "$GEMMINI_ROC
 ensure_upstream "generators/gemmini/software/gemmini-rocc-tests" "https://github.com/CaiTH0618/gemmini-rocc-tests"
 safe_pull "generators/gemmini/software/gemmini-rocc-tests"
 
-print "Processing generators/gemmini/rocket-chip (relative path: generators/gemmini/rocket-chip)"
-set_remote "generators/gemmini/rocket-chip" origin "$ROCKET_CHIP_REMOTE_URL"
-ensure_upstream "generators/gemmini/rocket-chip" "https://github.com/CaiTH0618/rocket-chip"
-safe_pull "generators/gemmini/rocket-chip"
+print "Processing generators/rocket-chip (relative path: generators/rocket-chip)"
+set_remote "generators/rocket-chip" origin "$ROCKET_CHIP_REMOTE_URL"
+ensure_upstream "generators/rocket-chip" "https://github.com/CaiTH0618/rocket-chip"
+safe_pull "generators/rocket-chip"
 
 # Final: attempt to checkout npu/dev at repo root
 print "Attempting to checkout branch npu/dev at repository root"
