@@ -327,7 +327,8 @@ if run_step "10"; then
 		-i $PREFIX \
 		-v version-file \
 		-x $CYDIR/conda-reqs/circt.json \
-		-g $GITHUB_TOKEN
+		-g $GITHUB_TOKEN && \
+        (perl -0777 -i.bak -pe 's{curl -fsSL https://github.com/llvm/circt/releases/download/\$OPT_VERSION/\$OPT_FILENAME \| tar -zx -C \$OPT_INSTALL_DIR/ --strip-components 1}{wget -O - https://github.com/llvm/circt/releases/download/\$OPT_VERSION/\$OPT_FILENAME | tar -zx -C \$OPT_INSTALL_DIR/ --strip-components 1}s' tools/install-circt/bin/download-release-or-nightly-circt.sh)
     fi
     exit_if_last_command_failed
 fi
@@ -338,6 +339,18 @@ if run_step "11"; then
     begin_step "11" "Cleaning up repository"
     $CYDIR/scripts/repo-clean.sh
     exit_if_last_command_failed
+fi
+
+# Remove firesim env backup if present
+if [ -f "sims/firesim/env.sh.backup" ]; then
+  echo "Removing sims/firesim/env.sh.backup"
+  rm -f "sims/firesim/env.sh.backup" || true
+fi
+
+# Remove circt download script backup if present
+if [ -f "tools/install-circt/bin/download-release-or-nightly-circt.sh.bak" ]; then
+  echo "Removing tools/install-circt/bin/download-release-or-nightly-circt.sh.bak"
+  rm -f "tools/install-circt/bin/download-release-or-nightly-circt.sh.bak" || true
 fi
 
 echo "Setup complete!"
