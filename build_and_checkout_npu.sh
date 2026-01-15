@@ -68,9 +68,6 @@ set_remote() {
 
 ensure_upstream() {
   local dir="$1" upstream_url="$2"
-  if [ ! -d "$dir" ] || [ ! -d "$dir/.git" ]; then
-    return 0
-  fi
   if git -C "$dir" remote get-url upstream >/dev/null 2>&1; then
     print "Upstream already configured in $dir"
   else
@@ -81,15 +78,8 @@ ensure_upstream() {
 
 safe_pull() {
   local dir="$1"
-  if [ ! -d "$dir" ] || [ ! -d "$dir/.git" ]; then
-    return 0
-  fi
-  print "Fetching and pulling in $dir"
+  print "Fetching in $dir (no pull)"
   git -C "$dir" fetch --all --prune || true
-  # Try fast-forward first; fall back to regular pull if necessary
-  if ! git -C "$dir" pull --ff-only 2>/dev/null; then
-    git -C "$dir" pull --no-rebase || true
-  fi
 }
 
 # Top-level upstream for chipyard itself
