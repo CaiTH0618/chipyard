@@ -72,14 +72,35 @@ ensure_upstream() {
     print "Upstream already configured in $dir"
   else
     print "Adding upstream for $dir -> $upstream_url"
-    git -C "$dir" remote add upstream "$upstream_url" || true
+    git -C "$dir" remote add upstream "$upstream_url"
   fi
 }
 
-safe_pull() {
+safe_fetch() {
   local dir="$1"
   print "Fetching in $dir (no pull)"
-  git -C "$dir" fetch --all --prune || true
+  git -C "$dir" fetch --all --prune
+}
+
+# Try to checkout npu/dev inside a sub-repository directory
+checkout_npu_dev_in_dir() {
+  local dir="$1"
+  print "Attempting to checkout npu/dev in $dir"
+  git -C "$dir" fetch --all --prune
+  if git -C "$dir" show-ref --verify --quiet refs/heads/npu/dev; then
+    git -C "$dir" checkout npu/dev
+    print "Checked out existing local branch npu/dev in $dir"
+  else
+    if git -C "$dir" ls-remote --exit-code origin refs/heads/npu/dev >/dev/null 2>&1; then
+      git -C "$dir" checkout -b npu/dev origin/npu/dev
+      print "Created and checked out npu/dev from origin/npu/dev in $dir"
+    elif git -C "$dir" ls-remote --exit-code upstream refs/heads/npu/dev >/dev/null 2>&1; then
+      git -C "$dir" checkout -b npu/dev upstream/npu/dev
+      print "Created and checked out npu/dev from upstream/npu/dev in $dir"
+    else
+      print "Branch npu/dev not found on origin or upstream in $dir; skipping"
+    fi
+  fi
 }
 
 # Top-level upstream for chipyard itself
@@ -87,48 +108,31 @@ if git remote get-url upstream >/dev/null 2>&1; then
   print "Top-level upstream already exists"
 else
   print "Adding top-level upstream https://github.com/CaiTH0618/chipyard"
-  git remote add upstream https://github.com/CaiTH0618/chipyard || true
+  git remote add upstream https://github.com/CaiTH0618/chipyard
 fi
 
 print "Processing sims/firesim"
 set_remote "sims/firesim" origin "$FIRESIM_REMOTE_URL"
 ensure_upstream "sims/firesim" "https://github.com/CaiTH0618/firesim"
-safe_pull "sims/firesim"
+safe_fetch "sims/firesim"
+checkout_npu_dev_in_dir "sims/firesim"
 
 print "Processing generators/gemmini"
 set_remote "generators/gemmini" origin "$GEMMINI_REMOTE_URL"
 ensure_upstream "generators/gemmini" "https://github.com/CaiTH0618/gemmini"
-safe_pull "generators/gemmini"
+safe_fetch "generators/gemmini"
+checkout_npu_dev_in_dir "generators/gemmini"
 
 print "Processing generators/gemmini/software/gemmini-rocc-tests"
 set_remote "generators/gemmini/software/gemmini-rocc-tests" origin "$GEMMINI_ROCC_TESTS_REMOTE_URL"
 ensure_upstream "generators/gemmini/software/gemmini-rocc-tests" "https://github.com/CaiTH0618/gemmini-rocc-tests"
-safe_pull "generators/gemmini/software/gemmini-rocc-tests"
+safe_fetch "generators/gemmini/software/gemmini-rocc-tests"
+checkout_npu_dev_in_dir "generators/gemmini/software/gemmini-rocc-tests"
 
 print "Processing generators/rocket-chip (relative path: generators/rocket-chip)"
 set_remote "generators/rocket-chip" origin "$ROCKET_CHIP_REMOTE_URL"
 ensure_upstream "generators/rocket-chip" "https://github.com/CaiTH0618/rocket-chip"
-safe_pull "generators/rocket-chip"
-
-# Final: attempt to checkout npu/dev at repo root
-print "Attempting to checkout branch npu/dev at repository root"
-git fetch --all --prune || true
-if git show-ref --verify --quiet refs/heads/npu/dev; then
-  git checkout npu/dev
-  print "Checked out existing local branch npu/dev"
-else
-  if git ls-remote --exit-code origin refs/heads/npu/dev >/dev/null 2>&1; then
-    git checkout -b npu/dev origin/npu/dev
-    print "Created and checked out npu/dev from origin/npu/dev"
-  elif git ls-remote --exit-code upstream refs/heads/npu/dev >/dev/null 2>&1; then
-    git checkout -b npu/dev upstream/npu/dev
-    print "Created and checked out npu/dev from upstream/npu/dev"
-  else
-    err "Branch npu/dev not found on origin or upstream. You may need to create it or fetch from another remote."
-    exit 4
-  fi
-fi
-
-print "Cleaning up backup files if present"
+safe_fetch "generators/rocket-chip"
+checkout_npu_dev_in_dir "generators/rocket-chip"
 
 print "Done. Verify changes and run any additional commands as needed."
