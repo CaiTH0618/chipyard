@@ -54,14 +54,14 @@ class GemminiLearningConfigSpad extends Config(
   // Add a Scratchpad to system bus
   new testchipip.soc.WithScratchpad(
     busWhere = SBUS,
-    base = 0xC0000000L, 
+    base = 0x70000000L, // max 256MB
     size = 1 << 20,  // 1MB
     banks = 4,
   ) ++
   // Add a Scratchpad to memory bus
   new testchipip.soc.WithScratchpad(
     busWhere = MBUS,
-    base = 0x08000000L, 
+    base = 0x60000000L, // max 256MB
     size = 1 << 20,  // 1MB
     banks = 4,
   ) ++
@@ -87,7 +87,7 @@ class GemminiLearningConfigSpad extends Config(
       shared_scratchpad_config = gemmini.SharedScratchpadConfig(
         // enable = false,
         enable = true,
-        global_base_addr = BigInt("F0000000", 16),
+        global_base_addr = BigInt("40000000", 16), // max 512MB
         local_size_bytes = 1024 * 1024,
         local_banks = 1,
         // local_banks = 4,
@@ -172,7 +172,7 @@ class GemminiLearningConfigSpadNoC extends Config (
   // Add a Scratchpad to system bus
   new testchipip.soc.WithScratchpad(
     busWhere = SBUS,
-    base = 0xC0000000L, 
+    base = 0x70000000L,
     size = 1 << 20,  // 1MB
     banks = 4,
   ) ++
