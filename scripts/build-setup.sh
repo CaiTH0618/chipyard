@@ -272,7 +272,7 @@ if run_step "6"; then
         pushd $CYDIR/sims/firesim &&
         (
             set -e # Subshells un-set "set -e" so it must be re enabled
-            source sourceme-manager.sh --skip-ssh-setup
+            source ./sourceme-manager.sh --skip-ssh-setup
             pushd sim
             # avoid directly building classpath s.t. target-injected files can be recompiled
             make sbt SBT_COMMAND="compile"
@@ -321,12 +321,14 @@ if run_step "10"; then
 	echo "Downloading CIRCT from nightly build"
 
 	git submodule update --init $CYDIR/tools/install-circt &&
+        (perl -0777 -i.bak -pe 's{wget -O - https://github.com/llvm/circt/releases/download/\$OPT_VERSION/\$OPT_FILENAME \| tar -zx -C \$OPT_INSTALL_DIR/ --strip-components 1}{curl -fsSL https://github.com/llvm/circt/releases/download/\$OPT_VERSION/\$OPT_FILENAME | tar -zx -C \$OPT_INSTALL_DIR/ --strip-components 1}s' tools/install-circt/bin/download-release-or-nightly-circt.sh) && 
 	    $CYDIR/tools/install-circt/bin/download-release-or-nightly-circt.sh \
 		-f circt-full-static-linux-x64.tar.gz \
 		-i $PREFIX \
 		-v version-file \
 		-x $CYDIR/conda-reqs/circt.json \
-		-g $GITHUB_TOKEN
+		-g $GITHUB_TOKEN && \
+        (perl -0777 -i.bak -pe 's{curl -fsSL https://github.com/llvm/circt/releases/download/\$OPT_VERSION/\$OPT_FILENAME \| tar -zx -C \$OPT_INSTALL_DIR/ --strip-components 1}{wget -O - https://github.com/llvm/circt/releases/download/\$OPT_VERSION/\$OPT_FILENAME | tar -zx -C \$OPT_INSTALL_DIR/ --strip-components 1}s' tools/install-circt/bin/download-release-or-nightly-circt.sh)
     fi
     exit_if_last_command_failed
 fi
@@ -337,6 +339,18 @@ if run_step "11"; then
     begin_step "11" "Cleaning up repository"
     $CYDIR/scripts/repo-clean.sh
     exit_if_last_command_failed
+fi
+
+# Remove firesim env backup if present
+if [ -f "sims/firesim/env.sh.backup" ]; then
+  echo "Removing sims/firesim/env.sh.backup"
+  rm -f "sims/firesim/env.sh.backup" || true
+fi
+
+# Remove circt download script backup if present
+if [ -f "tools/install-circt/bin/download-release-or-nightly-circt.sh.bak" ]; then
+  echo "Removing tools/install-circt/bin/download-release-or-nightly-circt.sh.bak"
+  rm -f "tools/install-circt/bin/download-release-or-nightly-circt.sh.bak" || true
 fi
 
 echo "Setup complete!"
