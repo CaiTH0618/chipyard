@@ -28,7 +28,7 @@ class GemminiLearningConfigBasic extends Config(
       shared_scratchpad_config = gemmini.SharedScratchpadConfig(
         // enable = false,
         enable = true,
-        global_base_addr = BigInt("F0000000", 16),
+        global_base_addr = BigInt("40000000", 16),
         local_size_bytes = 256 * 1024,
         local_banks = 1,
         // local_banks = 4,
@@ -163,7 +163,7 @@ class GemminiLearningConfigSpadNoC extends Config (
       ),
       constellation.noc.NoCParams(
         topology        = TerminalRouter(Mesh2D(4, 4)),
-        channelParamGen = (a, b) => UserChannelParams(Seq.fill(8) { UserVirtualChannelParams(4) }),
+        channelParamGen = (a, b) => UserChannelParams(Seq.fill(5) { UserVirtualChannelParams(4) }),
         routingRelation = BlockingVirtualSubnetworksRouting(TerminalRouterRouting(Mesh2DEscapeRouting()), 5, 1)
       )
     )
@@ -185,7 +185,10 @@ class GemminiLearningConfigSpadNoC extends Config (
     // Select a set of tileId.
     0, 1, 2, 3
   )(
-    gemmini.GemminiConfigs.defaultConfig
+    gemmini.GemminiConfigs.defaultConfig.copy(
+      // Enable pipelining to improve timing closure
+      tile_latency = 1
+    )
   ) ++
 
   // Enable different RoCCs based on the tileId
