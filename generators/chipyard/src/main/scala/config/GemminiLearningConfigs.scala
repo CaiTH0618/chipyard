@@ -202,3 +202,45 @@ class GemminiLearningConfigSpadNoC extends Config (
   new freechips.rocketchip.subsystem.WithNMemoryChannels(4) ++
   new chipyard.config.AbstractConfig
 )
+
+
+class GemminiLearningConfigWithSaturn extends Config(
+  // Improve sim speed by removing TileLink monitors
+  new freechips.rocketchip.subsystem.WithoutTLMonitors ++
+
+  new gemmini.DefaultGemminiConfig(
+    gemmini.GemminiConfigs.defaultConfig.copy(
+      // meshRows = 16,
+      meshRows = 64,
+      // meshColumns = 16,
+      meshColumns = 64,
+      // dma_buswidth = 4 * 8,
+      // dma_buswidth = 16 * 8,
+      dma_buswidth = 64 * 8,
+      shared_scratchpad_config = gemmini.SharedScratchpadConfig(
+        // enable = false,
+        enable = true,
+        global_base_addr = BigInt("F0000000", 16),
+        local_size_bytes = 256 * 1024,
+        local_banks = 1,
+        // local_banks = 4,
+        local_bank_interleaved_bytes = 64,
+        // local_bank_interleaved_bytes = 64 * 1024,
+        // local_bank_beat_bytes = 8,
+        // local_bank_beat_bytes = 16,
+        local_bank_beat_bytes = 64,
+      )
+    )
+  ) ++
+
+  // RocketCore require VLEN to be at least 128
+  new saturn.rocket.WithRocketVectorUnit(
+    vLen = 128, 
+    dLen = 128, 
+    params = saturn.common.VectorParams.minParams
+  ) ++
+  new freechips.rocketchip.rocket.WithNBigCores(1) ++
+  // new freechips.rocketchip.rocket.WithNHugeCores(1) ++
+  new chipyard.config.WithSystemBusWidth(16 * 8) ++
+  new chipyard.config.AbstractConfig
+)
