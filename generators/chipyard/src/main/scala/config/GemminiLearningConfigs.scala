@@ -244,3 +244,51 @@ class GemminiLearningConfigWithSaturn extends Config(
   new chipyard.config.WithSystemBusWidth(16 * 8) ++
   new chipyard.config.AbstractConfig
 )
+
+
+class GemminiLearningConfigWithSaturn2 extends Config(
+  // Improve sim speed by removing TileLink monitors
+  new freechips.rocketchip.subsystem.WithoutTLMonitors ++
+  // Remove the default Scratchpad in `AbstractConfig`
+  new testchipip.soc.WithNoScratchpads() ++
+
+  // Select a set of tileId/hardId and instantiate one gemmini to each of them.
+  new chipyard.config.WithMultiRoCCGemmini(
+    // Select a set of tileId.
+    0, 1, 2, 3
+  )(
+    gemmini.GemminiConfigs.defaultConfig.copy(
+      meshRows = 16,
+      meshColumns = 16,
+      dataflow = gemmini.Dataflow.WS,
+      sp_capacity = gemmini.CapacityInKilobytes(256),
+      acc_capacity = gemmini.CapacityInKilobytes(64),
+      has_training_convs = false,
+    )
+  ) ++
+  // Enable different RoCCs based on the tileId
+  new chipyard.config.WithMultiRoCC ++
+
+  // Set Saturn Vector Unit
+  new saturn.rocket.WithRocketVectorUnit(
+    vLen = 128, 
+    dLen = 128, 
+    params = saturn.common.VectorParams.refParams,
+    cores = Some(Seq(0, 1, 2, 3)),
+  ) ++
+  // Set CPU cores
+  new freechips.rocketchip.rocket.WithNBigCores(4) ++
+
+  // This will set the banking factor of L2 cache.
+  new freechips.rocketchip.subsystem.WithNBanks(4) ++
+  // Set L2 cache.
+  new freechips.rocketchip.subsystem.WithInclusiveCache(
+    nWays = 16,
+    capacityKB = 1024,
+  ) ++
+  // Set the width of system bus
+  new chipyard.config.WithSystemBusWidth(16 * 8) ++
+  // Set number of memory channels.
+  new freechips.rocketchip.subsystem.WithNMemoryChannels(4) ++
+  new chipyard.config.AbstractConfig
+)
