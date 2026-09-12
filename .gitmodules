@@ -154,3 +154,7 @@
 [submodule "generators/vexiiriscv"]
 	path = generators/vexiiriscv
 	url = https://github.com/ucb-bar/vexiiriscv-tile.git
+[submodule "generators/activespm"]
+	path = generators/activespm
+	url = git@github.com:CaiTH0618/activespm.git
+	branch = npu/dev

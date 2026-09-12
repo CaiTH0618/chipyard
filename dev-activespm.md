@@ -17,7 +17,6 @@ The target NPU subsystem contains multiple RocketCore, Gemmini and ActiveSPM ins
 - `ActiveSPMParams` will include the instance ID, control and scratchpad address ranges, beat bytes, bank count and allowed external-memory address ranges.
 - Instance addresses will be explicit configuration parameters. The instance ID will be used for identification and node naming, not for implicit address calculation.
 - Test and example configs will be at `generators/chipyard/src/main/scala/config`.
-- The user-facing document will be at `docs-npu/activespm.md`.
 
 ### DMA Function
 
@@ -128,3 +127,4 @@ Add a short summary of progress here after each dev round.
 - Timestamp: Summary of progress.
 - Timestamp: Summary of progress.
 - Timestamp: Summary of progress.
+- 2026-09-13: Created the ActiveSPM submodule and empty generator directory skeleton, established matching `main` and `npu/dev` branches, and connected the empty project to the top-level Chipyard build.

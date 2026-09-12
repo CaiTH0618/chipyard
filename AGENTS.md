@@ -6,6 +6,7 @@ Project Introduction
   - `./generators/rocket-chip`
   - `./generators/gemmini`
   - `./generators/gemmini/software/gemmini-rocc-tests`
+  - `./generators/activespm`
   - `./sims/firesim`
 - Documents on customization are in `./docs-npu`. Entry document is `./docs-npu/index.md`
 - Run `source env.sh` to enter the Chipyard environment.
