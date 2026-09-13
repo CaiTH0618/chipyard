@@ -11,5 +11,4 @@ Project Introduction
 - Documents on customization are in `./docs-npu`. Entry document is `./docs-npu/index.md`
 
 Project Usage
-- Run `source env.sh` to enter the Chipyard environment.
-
+- Run `source env.sh && source scripts/chipyard-build-resources.sh` to enter the Chipyard environment.
