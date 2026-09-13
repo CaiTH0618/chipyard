@@ -74,8 +74,7 @@ Gemmini、`gemmini-rocc-tests`、ActiveSPM 和 FireSim 使用相同流程，并�
 非 Collaborator 的 submodule commit 只存在于个人 fork，因此还必须在个人功能分支中修改父仓库的 `.gitmodules`，让其指向个人 fork 的 HTTPS URL。例如修改 Rocket Chip 时，在顶层 Chipyard 执行：
 
 ```bash
-git config --file .gitmodules submodule.generators/rocket-chip.url \
-  https://github.com/<username>/rocket-chip.git
+git config --file .gitmodules submodule.generators/rocket-chip.url https://github.com/<username>/rocket-chip.git
 ```
 
 如果修改的是 `gemmini-rocc-tests`，则修改 `generators/gemmini/.gitmodules` 中对应的 URL。这样其他人 checkout 个人功能分支时，才能获取该分支记录的 submodule commit。
