@@ -7,6 +7,7 @@ The docs explain the customization work on the original Chipyard. Customized mod
 - `./generators/rocket-chip`
 - `./generators/gemmini`
 - `./generators/gemmini/software/gemmini-rocc-tests`
+- `./generators/activespm`
 - `./sims/firesim`
 
 NOTE: These modules have different upstream url than the orignal Chipyard. But the .gitmodules still save the original url for submodules. So `git submodule xxx` might override their upstream url.

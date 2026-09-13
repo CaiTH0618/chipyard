@@ -181,6 +181,7 @@ lazy val mempress = (project in file("generators/mempress"))
 lazy val activespm = (project in file("generators/activespm"))
   .dependsOn(rocketchip)
   .settings(libraryDependencies ++= rocketLibDeps.value)
+  .settings(scalaTestSettings)
   .settings(commonSettings)
 
 lazy val barf = (project in file("generators/bar-fetchers"))

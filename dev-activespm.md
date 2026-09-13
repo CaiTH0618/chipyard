@@ -128,3 +128,4 @@ Add a short summary of progress here after each dev round.
 - Timestamp: Summary of progress.
 - Timestamp: Summary of progress.
 - 2026-09-13: Created the ActiveSPM submodule and empty generator directory skeleton, established matching `main` and `npu/dev` branches, and connected the empty project to the top-level Chipyard build.
+- 2026-09-13: Added the elaboratable ActiveSPM Scala framework, stable control/DMA interface contracts, TileLink node shells, multi-instance subsystem attachment, scaffold configuration, tests, and user-facing documentation.

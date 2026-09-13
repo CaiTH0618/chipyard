@@ -9,8 +9,7 @@ Project Introduction
   - `./generators/activespm`
   - `./sims/firesim`
 - Documents on customization are in `./docs-npu`. Entry document is `./docs-npu/index.md`
-- Run `source env.sh` to enter the Chipyard environment.
 
-Rules for Agents:
-- Update `./docs-npu` after modification if it's necessary. Follow the docs principles in `./docs-npu/index.md`
+Project Usage
+- Run `source env.sh` to enter the Chipyard environment.
 
