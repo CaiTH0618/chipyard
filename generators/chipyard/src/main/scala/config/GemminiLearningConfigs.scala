@@ -136,18 +136,18 @@ class GemminiLearningConfigSpadNoC extends Config (
           "Core 1" -> 9,  
           "Core 2" -> 10, 
           "Core 3" -> 11,
-          "Gemmini0" -> 8,
-          "Gemmini1" -> 9,
-          "Gemmini2" -> 10,
-          "Gemmini3" -> 11,
+          "Gemmini[0]" -> 8,
+          "Gemmini[1]" -> 9,
+          "Gemmini[2]" -> 10,
+          "Gemmini[3]" -> 11,
           "serial_tl" -> 7
         ),
         outNodeMapping = ListMap(
           // Shared scratchpad in Gemmini
-          "Gemmini0" -> 8,  
-          "Gemmini1" -> 9,
-          "Gemmini2" -> 10,
-          "Gemmini3" -> 11,
+          "Gemmini[0]" -> 8,
+          "Gemmini[1]" -> 9,
+          "Gemmini[2]" -> 10,
+          "Gemmini[3]" -> 11,
           // Cache banks
           "system[0]" -> 12,  
           "system[1]" -> 13, 

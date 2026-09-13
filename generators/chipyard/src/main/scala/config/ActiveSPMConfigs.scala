@@ -44,10 +44,10 @@ class ActiveSPMDualGemminiMeshRocketConfig extends Config(
       inNodeMapping = ListMap(
         "serial_tl" -> 0,
         "Core 0" -> 0,
-        "Gemmini0" -> 0,
+        "Gemmini[0]" -> 0,
         "activespm-dma[0]" -> 1,
         "Core 1" -> 3,
-        "Gemmini1" -> 3,
+        "Gemmini[1]" -> 3,
         "activespm-dma[1]" -> 4),
       outNodeMapping = ListMap(
         "pbus" -> 0,
