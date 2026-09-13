@@ -69,7 +69,7 @@ The target NPU subsystem contains multiple RocketCore, Gemmini and ActiveSPM ins
 - Each ActiveSPM instance will expose one contiguous, non-overlapping TileLink address region. Its base address and size are configuration parameters.
 - The scratchpad will be non-cacheable, non-executable and non-atomic. It will support only TileLink `Get`, `PutFullData` and `PutPartialData` operations.
 - The storage will be divided into a configurable power-of-two number of banks. Every bank will be implemented directly with `TLRAM` or its thin ActiveSPM wrapper.
-- Banks will be interleaved at beat granularity, with bank selection `(localOffset / beatBytes) % nBanks`. The beat bytes, bank count and scratchpad size must be powers of two; the scratchpad base must be aligned to its size; and the scratchpad must contain at least one beat per bank.
+- Banks are interleaved at the native scratchpad beat granularity, with bank selection `(localOffset / spadBeatBytes) % nBanks`. `spadBeatBytes`, the bank count and scratchpad size must be powers of two; the scratchpad base must be aligned to its size; and the scratchpad must contain at least one beat per bank.
 - The external scratchpad manager and the DMA local client will meet at internal bank-level TileLink crossbars. The DMA-to-scratchpad path is a high-bandwidth internal path and is not exposed to SBus, the global NoC or NoC mapping.
 - Different banks may operate concurrently. Requests targeting the same bank will be serialized with fair arbitration and backpressure.
 - The global and local paths observe the same storage. No cache or private copy may be inserted on either path, and partial writes must preserve every unmasked byte.
@@ -129,3 +129,4 @@ Add a short summary of progress here after each dev round.
 - Timestamp: Summary of progress.
 - 2026-09-13: Created the ActiveSPM submodule and empty generator directory skeleton, established matching `main` and `npu/dev` branches, and connected the empty project to the top-level Chipyard build.
 - 2026-09-13: Added the elaboratable ActiveSPM Scala framework, stable control/DMA interface contracts, TileLink node shells, multi-instance subsystem attachment, scaffold configuration, tests, and user-facing documentation.
+- 2026-09-13: Replaced the fail-fast scratchpad shell with shared banked `TLRAM` storage, added native-width/SBus adaptation and a wide-SBus scaffold, and verified full, partial, concurrent, backpressured, and reset-time accesses across the global and DMA-local TileLink paths.

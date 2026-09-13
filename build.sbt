@@ -181,6 +181,8 @@ lazy val mempress = (project in file("generators/mempress"))
 lazy val activespm = (project in file("generators/activespm"))
   .dependsOn(rocketchip)
   .settings(libraryDependencies ++= rocketLibDeps.value)
+  .settings(libraryDependencies += "edu.berkeley.cs" %% "chiseltest" % chiselTestVersion % Test)
+  .settings(Test / parallelExecution := false)
   .settings(scalaTestSettings)
   .settings(commonSettings)
 
