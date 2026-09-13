@@ -7,10 +7,8 @@
 准备好 Chipyard 1.13.0 所需的系统依赖和 Conda，然后直接 clone `npu/dev` 并运行原生 setup：
 
 ```bash
-git clone --branch npu/dev \
-  https://github.com/CaiTH0618/chipyard.git
+git clone --branch npu/dev https://github.com/CaiTH0618/chipyard.git
 cd chipyard
-
 ./build-setup.sh riscv-tools
 ```
 
@@ -20,7 +18,7 @@ setup 完成后，每次开始工作前进入环境：
 
 ```bash
 source env.sh
-source scripts/chipyard-build-resources.sh
+source scripts/chipyard-build-resources.sh  # 配置构建并行度和 JVM 内存
 ```
 
 `env.sh` 和 `.conda-env` 由 setup 在本机生成，不要从其他开发者的工作目录复制。
@@ -44,13 +42,12 @@ git push -u origin npu/<topic>
 以 Rocket Chip 为例，对需要修改的 submodule 执行：
 
 ```bash
-git -C generators/rocket-chip remote set-url --push origin \
-  git@github.com:CaiTH0618/rocket-chip.git
+git -C generators/rocket-chip remote set-url --push origin git@github.com:CaiTH0618/rocket-chip.git
 git -C generators/rocket-chip switch -c npu/<topic>
 git -C generators/rocket-chip push -u origin npu/<topic>
 ```
 
-Gemmini、`gemmini-rocc-tests`、ActiveSPM 和 FireSim 使用相同流程，并替换为相应的路径和 `CaiTH0618` 仓库 URL。
+Gemmini、`gemmini-rocc-tests`、ActiveSPM 和 FireSim 使用相同流程，并替换为相应的路径和 `CaiTH0618` 仓库 URL。每个仓库的权限独立判断：只对具有 Collaborator 权限的仓库使用本流程。
 
 ### 不是 `CaiTH0618` 相关仓库的 Collaborator
 
@@ -67,15 +64,23 @@ git push -u origin npu/<topic>
 
 ```bash
 git -C generators/rocket-chip remote rename origin upstream
-git -C generators/rocket-chip remote add origin \
-  git@github.com:<username>/rocket-chip.git
+git -C generators/rocket-chip remote add origin git@github.com:<username>/rocket-chip.git
 git -C generators/rocket-chip switch -c npu/<topic>
 git -C generators/rocket-chip push -u origin npu/<topic>
 ```
 
 Gemmini、`gemmini-rocc-tests`、ActiveSPM 和 FireSim 使用相同流程，并替换为相应的路径和个人仓库 URL。
 
-不要修改 `.gitmodules` 来保存个人仓库 URL；这些 URL 只配置在自己的本地 Git remote 中，避免影响其他开发者初始化。
+非 Collaborator 的 submodule commit 只存在于个人 fork，因此还必须在个人功能分支中修改父仓库的 `.gitmodules`，让其指向个人 fork 的 HTTPS URL。例如修改 Rocket Chip 时，在顶层 Chipyard 执行：
+
+```bash
+git config --file .gitmodules submodule.generators/rocket-chip.url \
+  https://github.com/<username>/rocket-chip.git
+```
+
+如果修改的是 `gemmini-rocc-tests`，则修改 `generators/gemmini/.gitmodules` 中对应的 URL。这样其他人 checkout 个人功能分支时，才能获取该分支记录的 submodule commit。
+
+个人 URL 只保留在个人功能分支中。改动准备合入 `CaiTH0618` 仓库时，相关 submodule commit 必须先进入对应的 `CaiTH0618` 仓库，并将 `.gitmodules` 恢复为 `CaiTH0618` URL。
 
 ## 提交跨仓库修改
 
@@ -87,10 +92,10 @@ gemmini-rocc-tests
 → chipyard
 ```
 
-确认子模块 commit 已经 push 到有写入权限的目标远端后，才能在父仓库提交对应路径：
+确认子模块 commit 已经 push 到父仓库 `.gitmodules` 所记录的远端后，才能在父仓库提交对应路径。如果修改过 `.gitmodules`，应与 submodule gitlink 一起提交：
 
 ```bash
-git add generators/gemmini
+git add .gitmodules generators/gemmini
 git commit
 git push origin npu/<topic>
 ```
