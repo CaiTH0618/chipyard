@@ -25,11 +25,36 @@ source scripts/chipyard-build-resources.sh
 
 `env.sh` 和 `.conda-env` 由 setup 在本机生成，不要从其他开发者的工作目录复制。
 
-## 在个人仓库中开发
+## 开始开发
 
-不要直接向 `CaiTH0618` 下的 Chipyard 或 submodule 仓库提交。先在自己的 GitHub 账号中 fork Chipyard，以及本次需要修改的每个 submodule。
+无论是否具有仓库写入权限，都不要使用 `npu/dev` 作为开发分支名。`npu/dev` 只作为公共初始化基线；请将 `<topic>` 替换为改动内容，并创建 `npu/<topic>` 分支。
 
-将顶层 Chipyard 的原始远端保留为 `upstream`，并把 `origin` 指向自己的 fork；将 `<username>` 和 `<topic>` 替换为实际名称：
+setup 后 submodule 显示 detached HEAD 是正常现象。只需要为本次实际修改的 submodule 配置远端和创建分支。
+
+### 是 `CaiTH0618` 相关仓库的 Collaborator
+
+Collaborator 可以向对应的 `CaiTH0618` 仓库提交。保留现有 `origin`，为顶层 Chipyard 配置 SSH push URL，然后创建并推送功能分支：
+
+```bash
+git remote set-url --push origin git@github.com:CaiTH0618/chipyard.git
+git switch -c npu/<topic>
+git push -u origin npu/<topic>
+```
+
+以 Rocket Chip 为例，对需要修改的 submodule 执行：
+
+```bash
+git -C generators/rocket-chip remote set-url --push origin \
+  git@github.com:CaiTH0618/rocket-chip.git
+git -C generators/rocket-chip switch -c npu/<topic>
+git -C generators/rocket-chip push -u origin npu/<topic>
+```
+
+Gemmini、`gemmini-rocc-tests`、ActiveSPM 和 FireSim 使用相同流程，并替换为相应的路径和 `CaiTH0618` 仓库 URL。
+
+### 不是 `CaiTH0618` 相关仓库的 Collaborator
+
+先在自己的 GitHub 账号中 fork Chipyard，以及本次需要修改的每个 submodule。将原始远端保留为 `upstream`，并把 `origin` 指向自己的 fork；将 `<username>` 替换为自己的 GitHub 用户名：
 
 ```bash
 git remote rename origin upstream
@@ -38,7 +63,7 @@ git switch -c npu/<topic>
 git push -u origin npu/<topic>
 ```
 
-setup 后 submodule 显示 detached HEAD 是正常现象。以 Rocket Chip 为例，将其远端切换到自己的 fork，并从当前固定版本创建功能分支：
+以 Rocket Chip 为例，对需要修改的 submodule 执行：
 
 ```bash
 git -C generators/rocket-chip remote rename origin upstream
@@ -48,11 +73,9 @@ git -C generators/rocket-chip switch -c npu/<topic>
 git -C generators/rocket-chip push -u origin npu/<topic>
 ```
 
-Gemmini、`gemmini-rocc-tests`、ActiveSPM 和 FireSim 使用相同流程，并替换为相应的路径和个人仓库 URL。只需要 fork 和切换本次实际修改的 submodule。
+Gemmini、`gemmini-rocc-tests`、ActiveSPM 和 FireSim 使用相同流程，并替换为相应的路径和个人仓库 URL。
 
 不要修改 `.gitmodules` 来保存个人仓库 URL；这些 URL 只配置在自己的本地 Git remote 中，避免影响其他开发者初始化。
-
-不要使用 `npu/dev` 作为个人开发分支名。`npu/dev` 是本项目提供的公共初始化基线；个人开发分支统一使用能够说明改动内容的 `npu/<topic>`。
 
 ## 提交跨仓库修改
 
@@ -64,7 +87,7 @@ gemmini-rocc-tests
 → chipyard
 ```
 
-确认子模块 commit 已经 push 到自己的远程仓库后，才能在父仓库提交对应路径：
+确认子模块 commit 已经 push 到有写入权限的目标远端后，才能在父仓库提交对应路径：
 
 ```bash
 git add generators/gemmini
