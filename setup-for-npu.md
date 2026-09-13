@@ -1,5 +1,7 @@
 # NPU Chipyard 初始化与开发
 
+本文只面向尚未 clone 本项目的新开发者。
+
 ## 首次初始化
 
 准备好 Chipyard 1.13.0 所需的系统依赖和 Conda，然后直接 clone `npu/dev` 并运行原生 setup：
@@ -22,27 +24,6 @@ source scripts/chipyard-build-resources.sh
 ```
 
 `env.sh` 和 `.conda-env` 由 setup 在本机生成，不要从其他开发者的工作目录复制。
-
-## 更新已有工作目录
-
-先提交或保存所有本地修改，然后在项目根目录执行：
-
-```bash
-git pull --ff-only
-git submodule sync --recursive
-git submodule update --init
-git submodule sync --recursive
-```
-
-这样会更新顶层 submodule、同步新的仓库 URL，并再次同步 Gemmini 等模块内部的嵌套 submodule URL。
-
-不要使用：
-
-```bash
-git submodule update --remote
-```
-
-该命令会绕过顶层仓库固定的 submodule 版本，可能使不同开发者得到不同代码。
 
 ## 在 Submodule 中开发
 
