@@ -1,0 +1,1560 @@
+{
+  "abi": 1,
+  "sample": 0,
+  "source_quant_manifest_sha256": "ac1938edc18326350d0269a85099818804c7c65722568f671ccdbc48191a66b9",
+  "source_sample_manifest_sha256": "47bccf7ec975901282dad3583a018f0307f094f2d8fac9eeeaa7d005a7fa6e03",
+  "blob_sha256": "7ceec07cf68bdf0af1d5145171094a96d6d709be54846c874de638ed1daea0b9",
+  "blob_bytes": 3273632,
+  "count": 40,
+  "max_output_bytes": 802816,
+  "arrays": [
+    {
+      "name": "requant_00_0x3aca8c89.a",
+      "offset": 0,
+      "bytes": 1,
+      "shape": [
+        1,
+        1
+      ],
+      "dtype": "|i1",
+      "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+    },
+    {
+      "name": "requant_00_0x3aca8c89.b",
+      "offset": 64,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "fd08be957bda07dc529ad8100df732f9ce12ae3e42bcda6acabe12c02dfd6989"
+    },
+    {
+      "name": "requant_00_0x3aca8c89.d",
+      "offset": 128,
+      "bytes": 124,
+      "shape": [
+        31
+      ],
+      "dtype": "<i4",
+      "sha256": "1045a99f48f0ad5f54d4604217d97d758bcbcbe890edbabbf4c56fe149db86c5"
+    },
+    {
+      "name": "requant_00_0x3aca8c89.expected",
+      "offset": 256,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "965c60bd3f841af1681959323810b1df86fd58e8a30dad7da3f070bead30c3bc"
+    },
+    {
+      "name": "requant_01_0x3ada173e.expected",
+      "offset": 320,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "6d7ef92df9398d4f8c2a9caf092e6fe497b03ff8a063934b8f8987c4793ccaad"
+    },
+    {
+      "name": "requant_02_0x3af06fb8.expected",
+      "offset": 384,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "62bce46e0e16973a15770cce9e07624463e94603382e470b7348c52ca7e0de14"
+    },
+    {
+      "name": "requant_03_0x3b256516.expected",
+      "offset": 448,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "a434a0fea41f3c056e65887830a70451b21be72aec32e729f1b228b3fd1646cc"
+    },
+    {
+      "name": "requant_09_0x3b638984.expected",
+      "offset": 512,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "078afb60e4d91dc8b898b09187d71f513f6a6c35c41a62388f0575b9798ccd5a"
+    },
+    {
+      "name": "requant_11_0x3b8f3723.expected",
+      "offset": 576,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "e87a99dd1e94bedc7cf27c001ef88e4a9b6dd81de5ef112eb9058a75fba6895b"
+    },
+    {
+      "name": "requant_12_0x3ba24d48.expected",
+      "offset": 640,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "6b99b61af30b89b9cdf89a879d136b868801d2f552c3ae1945dc4fd8bd261943"
+    },
+    {
+      "name": "requant_14_0x3bb29c93.expected",
+      "offset": 704,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "8464e1f3a5ee403fe6223a95ef7406818ccf05a07b32105bd2f957023bd4da54"
+    },
+    {
+      "name": "requant_16_0x3bdb9e76.expected",
+      "offset": 768,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "12740eee45693ce7b8f09d48bce5c1b642a57f3c78f7eb15790519847bd7c5bd"
+    },
+    {
+      "name": "requant_18_0x3c00995e.expected",
+      "offset": 832,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "dca141af5ba0934b9ca3c54b319efaadd93941043efb028a3c68af42ed25dcbd"
+    },
+    {
+      "name": "requant_20_0x3ca72f05.expected",
+      "offset": 896,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "6fc6b5a49855ff8a7b76830a4914e4c65728ab1394b11d295940be2cd7668e56"
+    },
+    {
+      "name": "requant_21_0x3e9d07a0.expected",
+      "offset": 960,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "354343187580a450276caa157168ce87dfcb1d363852d7934796ed6baaa6ea55"
+    },
+    {
+      "name": "requant_22_0x3f000000.expected",
+      "offset": 1024,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "ee92e27359e5f8762c7499538cd8bcace8f981a2df72fabc5fb28b5856640047"
+    },
+    {
+      "name": "requant_23_0x3f35b642.expected",
+      "offset": 1088,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "48d66ca75a404108fad76bafff426ebfc6f395ffed2ea7cd861a22d4a40fca8f"
+    },
+    {
+      "name": "requant_24_0x3f4b73d4.expected",
+      "offset": 1152,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "5acb346c36190f281a809f0220b7a5441f32f91826e079be2f51febfc8df118a"
+    },
+    {
+      "name": "requant_25_0x3f800000.expected",
+      "offset": 1216,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "445c46d314d98db9d1848ce0fee554587891d830df24224f2a2c706a0b32a42f"
+    },
+    {
+      "name": "full_width_bias_int32.expected",
+      "offset": 1280,
+      "bytes": 124,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "<i4",
+      "sha256": "1045a99f48f0ad5f54d4604217d97d758bcbcbe890edbabbf4c56fe149db86c5"
+    },
+    {
+      "name": "requant_half_relu.expected",
+      "offset": 1408,
+      "bytes": 31,
+      "shape": [
+        1,
+        31
+      ],
+      "dtype": "|i1",
+      "sha256": "aa0353072afe89fc97d9ed0a7facb7170494e9b2abe766475862846c8163b433"
+    },
+    {
+      "name": "stem_7x7_s2_relu.a",
+      "offset": 1472,
+      "bytes": 150528,
+      "shape": [
+        1,
+        224,
+        224,
+        3
+      ],
+      "dtype": "|i1",
+      "sha256": "bafec79cde671f487a6fc82346dade04755c7a9aed21e9d9fccf1a7e6c0c329a"
+    },
+    {
+      "name": "stem_7x7_s2_relu.b",
+      "offset": 152000,
+      "bytes": 9408,
+      "shape": [
+        7,
+        7,
+        3,
+        64
+      ],
+      "dtype": "|i1",
+      "sha256": "a6fe9754a4b1be3d7a481cc52035aeaaedcbb6081153e9a529c08b0867f6a7b8"
+    },
+    {
+      "name": "stem_7x7_s2_relu.d",
+      "offset": 161408,
+      "bytes": 256,
+      "shape": [
+        64
+      ],
+      "dtype": "<i4",
+      "sha256": "1d7f451e1480ca5e18854f28b93ad3fbcf15b793e41681f1d227231c49336f8c"
+    },
+    {
+      "name": "stem_7x7_s2_relu.expected",
+      "offset": 161664,
+      "bytes": 802816,
+      "shape": [
+        1,
+        112,
+        112,
+        64
+      ],
+      "dtype": "|i1",
+      "sha256": "74d35d10697cd970a77e3cc397b6fed1fad6ba8fab28a202bd05c7f1e6aea121"
+    },
+    {
+      "name": "stem_fused_maxpool.expected",
+      "offset": 964480,
+      "bytes": 200704,
+      "shape": [
+        1,
+        56,
+        56,
+        64
+      ],
+      "dtype": "|i1",
+      "sha256": "ddca343a9901e5a7a05676bf7e7058a73957aaca1f2a0ce59727a13237cbdc7e"
+    },
+    {
+      "name": "conv3x3_s1_real.b",
+      "offset": 1165184,
+      "bytes": 36864,
+      "shape": [
+        3,
+        3,
+        64,
+        64
+      ],
+      "dtype": "|i1",
+      "sha256": "c1c3f718df75435402f867dc731531b77af7791e39d19e6018d740fe5731acff"
+    },
+    {
+      "name": "conv3x3_s1_real.d",
+      "offset": 1202048,
+      "bytes": 256,
+      "shape": [
+        64
+      ],
+      "dtype": "<i4",
+      "sha256": "d97d6bccf1b65f067d7c675bf208d466b3acf123cddc174986c2d04861699bb9"
+    },
+    {
+      "name": "conv3x3_s1_real.expected",
+      "offset": 1202304,
+      "bytes": 200704,
+      "shape": [
+        1,
+        56,
+        56,
+        64
+      ],
+      "dtype": "|i1",
+      "sha256": "3a2ecc532e7d6571fd3210ed26a413408f5d48f2302b0e4cd6480230bf2235b4"
+    },
+    {
+      "name": "conv3x3_s1_no_relu_real.b",
+      "offset": 1403008,
+      "bytes": 36864,
+      "shape": [
+        3,
+        3,
+        64,
+        64
+      ],
+      "dtype": "|i1",
+      "sha256": "a2a881e765b47d4c15351c6532a1604d4bb9d45000968b5553192855c01f430b"
+    },
+    {
+      "name": "conv3x3_s1_no_relu_real.d",
+      "offset": 1439872,
+      "bytes": 256,
+      "shape": [
+        64
+      ],
+      "dtype": "<i4",
+      "sha256": "1b16eb06d7282e9638c8ae1260dc1f6075dd1e5c34884923d3e203a0f849be62"
+    },
+    {
+      "name": "conv3x3_s1_no_relu_real.expected",
+      "offset": 1440128,
+      "bytes": 200704,
+      "shape": [
+        1,
+        56,
+        56,
+        64
+      ],
+      "dtype": "|i1",
+      "sha256": "3636756126f29f7d7fe2135ce9f04352f59db2ddb5f4ce45e8d104a1708c5a6a"
+    },
+    {
+      "name": "conv3x3_s2_real.a",
+      "offset": 1640832,
+      "bytes": 200704,
+      "shape": [
+        1,
+        56,
+        56,
+        64
+      ],
+      "dtype": "|i1",
+      "sha256": "aa6ce55f90c648ef2c54d3aec624c3baecd11c9f2cebe7732cf83a3e5095a254"
+    },
+    {
+      "name": "conv3x3_s2_real.b",
+      "offset": 1841536,
+      "bytes": 73728,
+      "shape": [
+        3,
+        3,
+        64,
+        128
+      ],
+      "dtype": "|i1",
+      "sha256": "41a8e0b17d6dda58bf9f43ceb2f75f76bbf6e6db9a6dd64e142a62f1b07c5d18"
+    },
+    {
+      "name": "conv3x3_s2_real.d",
+      "offset": 1915264,
+      "bytes": 512,
+      "shape": [
+        128
+      ],
+      "dtype": "<i4",
+      "sha256": "1048129fdef3ce6c49366a2d2392b84e8176374988fbb8d21aa14f10dbc381de"
+    },
+    {
+      "name": "conv3x3_s2_real.expected",
+      "offset": 1915776,
+      "bytes": 100352,
+      "shape": [
+        1,
+        28,
+        28,
+        128
+      ],
+      "dtype": "|i1",
+      "sha256": "598e714b8297d3881f653f2f9c1e6c3876404c3164daca2ad984992ef2afebb2"
+    },
+    {
+      "name": "projection1x1_s2_real.b",
+      "offset": 2016128,
+      "bytes": 8192,
+      "shape": [
+        1,
+        1,
+        64,
+        128
+      ],
+      "dtype": "|i1",
+      "sha256": "356abc671c4ee8557b1689bde1c40add474e7391e7f5c1ed60e5ab58cbba35a9"
+    },
+    {
+      "name": "projection1x1_s2_real.d",
+      "offset": 2024320,
+      "bytes": 512,
+      "shape": [
+        128
+      ],
+      "dtype": "<i4",
+      "sha256": "c417901f909eb2c5ccee4f775c71c047f2b53d98f729692100180809ea78ee89"
+    },
+    {
+      "name": "projection1x1_s2_real.expected",
+      "offset": 2024832,
+      "bytes": 100352,
+      "shape": [
+        1,
+        28,
+        28,
+        128
+      ],
+      "dtype": "|i1",
+      "sha256": "a8f60ab3dec198a9936fcd3f554e4d7aa43f92c66c03c592681794ec15c4e89d"
+    },
+    {
+      "name": "layer1.1_residual_real.a",
+      "offset": 2125184,
+      "bytes": 200704,
+      "shape": [
+        1,
+        56,
+        56,
+        64
+      ],
+      "dtype": "|i1",
+      "sha256": "995431ff4de524d00598d776f4dbda1127d2d144c91b4887be0c43af136a2d87"
+    },
+    {
+      "name": "layer1.1_residual_real.b",
+      "offset": 2325888,
+      "bytes": 200704,
+      "shape": [
+        1,
+        56,
+        56,
+        64
+      ],
+      "dtype": "|i1",
+      "sha256": "d34cb14250d58de1be98c8264c557b9b73cbc811ac544e22ad2a5cb72be63819"
+    },
+    {
+      "name": "layer2.0_residual_real.b",
+      "offset": 2526592,
+      "bytes": 100352,
+      "shape": [
+        1,
+        28,
+        28,
+        128
+      ],
+      "dtype": "|i1",
+      "sha256": "252ac3812218cd3dc1f9c3bc396687ecf46840f0aadb41197a72e57011023bf9"
+    },
+    {
+      "name": "layer2.0_residual_real.expected",
+      "offset": 2626944,
+      "bytes": 100352,
+      "shape": [
+        1,
+        28,
+        28,
+        128
+      ],
+      "dtype": "|i1",
+      "sha256": "8dea924d44e48d4e1cd7673439338aca84be28d6dc2af98841247c6b4f35b8b4"
+    },
+    {
+      "name": "residual_signed_ties.a",
+      "offset": 2727296,
+      "bytes": 9,
+      "shape": [
+        1,
+        9
+      ],
+      "dtype": "|i1",
+      "sha256": "fb7d2f741c3a0359ad60408d81e00d893285614514becea9dd405c7b2f93f60d"
+    },
+    {
+      "name": "residual_signed_ties.b",
+      "offset": 2727360,
+      "bytes": 9,
+      "shape": [
+        1,
+        9
+      ],
+      "dtype": "|i1",
+      "sha256": "03636b47902e05a1dd3c141b17a6b6601c89a45df62307ebf89f95ebf9ac7930"
+    },
+    {
+      "name": "residual_signed_ties.expected",
+      "offset": 2727424,
+      "bytes": 9,
+      "shape": [
+        1,
+        9
+      ],
+      "dtype": "|i1",
+      "sha256": "066ce515676d8c79573d45f9d7cff270de063f1ecf8a069f5c7bd0e50a49388f"
+    },
+    {
+      "name": "global_average7_real.a",
+      "offset": 2727488,
+      "bytes": 25088,
+      "shape": [
+        1,
+        7,
+        7,
+        512
+      ],
+      "dtype": "|i1",
+      "sha256": "fc499b2a9db884da1372b486295fd44e7c46c319a9b3fa2089fa3d955f58bb05"
+    },
+    {
+      "name": "global_average7_real.expected",
+      "offset": 2752576,
+      "bytes": 512,
+      "shape": [
+        1,
+        512
+      ],
+      "dtype": "|i1",
+      "sha256": "703e9d710e382bd61901e9c2f9dd73947416836cb6d1e51acf26d6b5a48ac9f0"
+    },
+    {
+      "name": "global_average7_boundary.a",
+      "offset": 2753088,
+      "bytes": 441,
+      "shape": [
+        1,
+        7,
+        7,
+        9
+      ],
+      "dtype": "|i1",
+      "sha256": "50f426dbfdf50d68aef2f7edb9227e5643c487357735b38bfd9875e9bfcd8ec9"
+    },
+    {
+      "name": "global_average7_boundary.expected",
+      "offset": 2753536,
+      "bytes": 9,
+      "shape": [
+        1,
+        9
+      ],
+      "dtype": "|i1",
+      "sha256": "2e2970ef2008ac9af7cba70962859e99d43389117d73176adefdf4232a22b8a7"
+    },
+    {
+      "name": "fc512x1000_full_int32_real.b",
+      "offset": 2753600,
+      "bytes": 512000,
+      "shape": [
+        512,
+        1000
+      ],
+      "dtype": "|i1",
+      "sha256": "306753944165fe7b8287897f49bdb29f8152c39fb5795c6efa4345b9f81b1b6c"
+    },
+    {
+      "name": "fc512x1000_full_int32_real.d",
+      "offset": 3265600,
+      "bytes": 4000,
+      "shape": [
+        1000
+      ],
+      "dtype": "<i4",
+      "sha256": "a78787651da26f7468dfe2e2f3658c3abc16feca690f0ba26915b8949988c781"
+    },
+    {
+      "name": "fc512x1000_full_int32_real.expected",
+      "offset": 3269632,
+      "bytes": 4000,
+      "shape": [
+        1,
+        1000
+      ],
+      "dtype": "<i4",
+      "sha256": "33200f7b6c29d84700828e1293d8472116e9e4339fc27d241f67a746f9d7a20c"
+    }
+  ],
+  "cases": [
+    {
+      "name": "requant_00_0x3aca8c89",
+      "op": 1,
+      "scale_bits": 986352777,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 256
+    },
+    {
+      "name": "requant_01_0x3ada173e",
+      "op": 1,
+      "scale_bits": 987371326,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 320
+    },
+    {
+      "name": "requant_02_0x3af06fb8",
+      "op": 1,
+      "scale_bits": 988835768,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 384
+    },
+    {
+      "name": "requant_03_0x3b256516",
+      "op": 1,
+      "scale_bits": 992306454,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 448
+    },
+    {
+      "name": "requant_04_0x3b329743",
+      "op": 1,
+      "scale_bits": 993171267,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 448
+    },
+    {
+      "name": "requant_05_0x3b3bf97b",
+      "op": 1,
+      "scale_bits": 993786235,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 448
+    },
+    {
+      "name": "requant_06_0x3b41436e",
+      "op": 1,
+      "scale_bits": 994132846,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 448
+    },
+    {
+      "name": "requant_07_0x3b529fc2",
+      "op": 1,
+      "scale_bits": 995270594,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 448
+    },
+    {
+      "name": "requant_08_0x3b5546d8",
+      "op": 1,
+      "scale_bits": 995444440,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 448
+    },
+    {
+      "name": "requant_09_0x3b638984",
+      "op": 1,
+      "scale_bits": 996379012,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 512
+    },
+    {
+      "name": "requant_10_0x3b7394dc",
+      "op": 1,
+      "scale_bits": 997430492,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 512
+    },
+    {
+      "name": "requant_11_0x3b8f3723",
+      "op": 1,
+      "scale_bits": 999241507,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 576
+    },
+    {
+      "name": "requant_12_0x3ba24d48",
+      "op": 1,
+      "scale_bits": 1000492360,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 640
+    },
+    {
+      "name": "requant_13_0x3baa95a6",
+      "op": 1,
+      "scale_bits": 1001035174,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 640
+    },
+    {
+      "name": "requant_14_0x3bb29c93",
+      "op": 1,
+      "scale_bits": 1001561235,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 704
+    },
+    {
+      "name": "requant_15_0x3bbb2ac2",
+      "op": 1,
+      "scale_bits": 1002121922,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 704
+    },
+    {
+      "name": "requant_16_0x3bdb9e76",
+      "op": 1,
+      "scale_bits": 1004248694,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 768
+    },
+    {
+      "name": "requant_17_0x3be210a0",
+      "op": 1,
+      "scale_bits": 1004671136,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 768
+    },
+    {
+      "name": "requant_18_0x3c00995e",
+      "op": 1,
+      "scale_bits": 1006672222,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 832
+    },
+    {
+      "name": "requant_19_0x3c00c6d6",
+      "op": 1,
+      "scale_bits": 1006683862,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 832
+    },
+    {
+      "name": "requant_20_0x3ca72f05",
+      "op": 1,
+      "scale_bits": 1017589509,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 896
+    },
+    {
+      "name": "requant_21_0x3e9d07a0",
+      "op": 1,
+      "scale_bits": 1050478496,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 960
+    },
+    {
+      "name": "requant_22_0x3f000000",
+      "op": 1,
+      "scale_bits": 1056964608,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 1024
+    },
+    {
+      "name": "requant_23_0x3f35b642",
+      "op": 1,
+      "scale_bits": 1060484674,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 1088
+    },
+    {
+      "name": "requant_24_0x3f4b73d4",
+      "op": 1,
+      "scale_bits": 1061909460,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 1152
+    },
+    {
+      "name": "requant_25_0x3f800000",
+      "op": 1,
+      "scale_bits": 1065353216,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 1216
+    },
+    {
+      "name": "full_width_bias_int32",
+      "op": 1,
+      "scale_bits": 1065353216,
+      "a_scale_bits": 1065353216,
+      "bytes": 124,
+      "dtype": "int32_le",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 0,
+      "full_C": 1,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 1280
+    },
+    {
+      "name": "requant_half_relu",
+      "op": 1,
+      "scale_bits": 1056964608,
+      "a_scale_bits": 1065353216,
+      "bytes": 31,
+      "dtype": "int8",
+      "shape": [
+        1,
+        31
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 31,
+      "K": 1,
+      "relu": 1,
+      "full_C": 0,
+      "a": 0,
+      "b": 64,
+      "d": 128,
+      "golden": 1408
+    },
+    {
+      "name": "stem_7x7_s2_relu",
+      "op": 2,
+      "scale_bits": 986352777,
+      "a_scale_bits": 1065353216,
+      "bytes": 802816,
+      "dtype": "int8",
+      "shape": [
+        1,
+        112,
+        112,
+        64
+      ],
+      "source_sample": 0,
+      "in_h": 224,
+      "in_w": 224,
+      "in_c": 3,
+      "out_c": 64,
+      "out_h": 112,
+      "out_w": 112,
+      "stride": 2,
+      "padding": 3,
+      "kernel": 7,
+      "relu": 1,
+      "pool_size": 1,
+      "pool_stride": 0,
+      "pool_padding": 0,
+      "a": 1472,
+      "b": 152000,
+      "d": 161408,
+      "golden": 161664
+    },
+    {
+      "name": "stem_fused_maxpool",
+      "op": 2,
+      "scale_bits": 986352777,
+      "a_scale_bits": 1065353216,
+      "bytes": 200704,
+      "dtype": "int8",
+      "shape": [
+        1,
+        56,
+        56,
+        64
+      ],
+      "source_sample": 0,
+      "in_h": 224,
+      "in_w": 224,
+      "in_c": 3,
+      "out_c": 64,
+      "out_h": 112,
+      "out_w": 112,
+      "stride": 2,
+      "padding": 3,
+      "kernel": 7,
+      "relu": 1,
+      "pool_size": 3,
+      "pool_stride": 2,
+      "pool_padding": 1,
+      "a": 1472,
+      "b": 152000,
+      "d": 161408,
+      "golden": 964480
+    },
+    {
+      "name": "conv3x3_s1_real",
+      "op": 2,
+      "scale_bits": 995444440,
+      "a_scale_bits": 1065353216,
+      "bytes": 200704,
+      "dtype": "int8",
+      "shape": [
+        1,
+        56,
+        56,
+        64
+      ],
+      "source_sample": 0,
+      "in_h": 56,
+      "in_w": 56,
+      "in_c": 64,
+      "out_c": 64,
+      "out_h": 56,
+      "out_w": 56,
+      "stride": 1,
+      "padding": 1,
+      "kernel": 3,
+      "relu": 1,
+      "pool_size": 1,
+      "pool_stride": 0,
+      "pool_padding": 0,
+      "a": 964480,
+      "b": 1165184,
+      "d": 1202048,
+      "golden": 1202304
+    },
+    {
+      "name": "conv3x3_s1_no_relu_real",
+      "op": 2,
+      "scale_bits": 999241507,
+      "a_scale_bits": 1065353216,
+      "bytes": 200704,
+      "dtype": "int8",
+      "shape": [
+        1,
+        56,
+        56,
+        64
+      ],
+      "source_sample": 0,
+      "in_h": 56,
+      "in_w": 56,
+      "in_c": 64,
+      "out_c": 64,
+      "out_h": 56,
+      "out_w": 56,
+      "stride": 1,
+      "padding": 1,
+      "kernel": 3,
+      "relu": 0,
+      "pool_size": 1,
+      "pool_stride": 0,
+      "pool_padding": 0,
+      "a": 1202304,
+      "b": 1403008,
+      "d": 1439872,
+      "golden": 1440128
+    },
+    {
+      "name": "conv3x3_s2_real",
+      "op": 2,
+      "scale_bits": 1001035174,
+      "a_scale_bits": 1065353216,
+      "bytes": 100352,
+      "dtype": "int8",
+      "shape": [
+        1,
+        28,
+        28,
+        128
+      ],
+      "source_sample": 0,
+      "in_h": 56,
+      "in_w": 56,
+      "in_c": 64,
+      "out_c": 128,
+      "out_h": 28,
+      "out_w": 28,
+      "stride": 2,
+      "padding": 1,
+      "kernel": 3,
+      "relu": 1,
+      "pool_size": 1,
+      "pool_stride": 0,
+      "pool_padding": 0,
+      "a": 1640832,
+      "b": 1841536,
+      "d": 1915264,
+      "golden": 1915776
+    },
+    {
+      "name": "projection1x1_s2_real",
+      "op": 2,
+      "scale_bits": 1001561235,
+      "a_scale_bits": 1065353216,
+      "bytes": 100352,
+      "dtype": "int8",
+      "shape": [
+        1,
+        28,
+        28,
+        128
+      ],
+      "source_sample": 0,
+      "in_h": 56,
+      "in_w": 56,
+      "in_c": 64,
+      "out_c": 128,
+      "out_h": 28,
+      "out_w": 28,
+      "stride": 2,
+      "padding": 0,
+      "kernel": 1,
+      "relu": 0,
+      "pool_size": 1,
+      "pool_stride": 0,
+      "pool_padding": 0,
+      "a": 1640832,
+      "b": 2016128,
+      "d": 2024320,
+      "golden": 2024832
+    },
+    {
+      "name": "layer1.1_residual_real",
+      "op": 3,
+      "scale_bits": 1065353216,
+      "a_scale_bits": 1060484674,
+      "bytes": 200704,
+      "dtype": "int8",
+      "shape": [
+        1,
+        56,
+        56,
+        64
+      ],
+      "source_sample": 0,
+      "I": 3136,
+      "J": 64,
+      "relu": 1,
+      "a": 2125184,
+      "b": 2325888,
+      "d": null,
+      "golden": 1640832
+    },
+    {
+      "name": "layer2.0_residual_real",
+      "op": 3,
+      "scale_bits": 1065353216,
+      "a_scale_bits": 1065353216,
+      "bytes": 100352,
+      "dtype": "int8",
+      "shape": [
+        1,
+        28,
+        28,
+        128
+      ],
+      "source_sample": 0,
+      "I": 784,
+      "J": 128,
+      "relu": 1,
+      "a": 2024832,
+      "b": 2526592,
+      "d": null,
+      "golden": 2626944
+    },
+    {
+      "name": "residual_signed_ties",
+      "op": 3,
+      "scale_bits": 1065353216,
+      "a_scale_bits": 1056964608,
+      "bytes": 9,
+      "dtype": "int8",
+      "shape": [
+        1,
+        9
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 9,
+      "relu": 1,
+      "a": 2727296,
+      "b": 2727360,
+      "d": null,
+      "golden": 2727424
+    },
+    {
+      "name": "global_average7_real",
+      "op": 4,
+      "scale_bits": 1065353216,
+      "a_scale_bits": 1065353216,
+      "bytes": 512,
+      "dtype": "int8",
+      "shape": [
+        1,
+        512
+      ],
+      "source_sample": 0,
+      "in_h": 7,
+      "in_c": 512,
+      "a": 2727488,
+      "b": null,
+      "d": null,
+      "golden": 2752576
+    },
+    {
+      "name": "global_average7_boundary",
+      "op": 4,
+      "scale_bits": 1065353216,
+      "a_scale_bits": 1065353216,
+      "bytes": 9,
+      "dtype": "int8",
+      "shape": [
+        1,
+        9
+      ],
+      "source_sample": 0,
+      "in_h": 7,
+      "in_c": 9,
+      "a": 2753088,
+      "b": null,
+      "d": null,
+      "golden": 2753536
+    },
+    {
+      "name": "fc512x1000_full_int32_real",
+      "op": 1,
+      "scale_bits": 1065353216,
+      "a_scale_bits": 1065353216,
+      "bytes": 4000,
+      "dtype": "int32_le",
+      "shape": [
+        1,
+        1000
+      ],
+      "source_sample": 0,
+      "I": 1,
+      "J": 1000,
+      "K": 512,
+      "relu": 0,
+      "full_C": 1,
+      "a": 2752576,
+      "b": 2753600,
+      "d": 3265600,
+      "golden": 3269632
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+build/
+generated/
+dist/
+reports/
+__pycache__/

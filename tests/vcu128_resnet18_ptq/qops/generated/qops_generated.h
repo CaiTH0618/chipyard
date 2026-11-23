@@ -1,0 +1,2 @@
+#define QOPS_COUNT 40
+#define QOPS_MAX_OUTPUT 802816

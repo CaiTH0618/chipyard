@@ -1,0 +1,126 @@
+{
+  "config": "VCU128DualRocketDualGemminiResNet18ActiveSPMConfig",
+  "source_memmap_filename": "chipyard.harness.TestHarness.VCU128DualRocketDualGemminiResNet18ActiveSPMConfig.memmap.json",
+  "source_memmap_sha256": "b9567cd1ee9d15c0cdc40c9050008feb5cbd3b09f334e3d118c3fa0ff99a55df",
+  "mapping": [
+    {
+      "base": [
+        268763136
+      ],
+      "size": [
+        4096
+      ],
+      "r": [
+        true
+      ],
+      "w": [
+        true
+      ],
+      "x": [
+        false
+      ],
+      "c": [
+        false
+      ],
+      "a": [
+        true
+      ],
+      "names": [
+        "activespm-ctrl-0@10050000"
+      ]
+    },
+    {
+      "base": [
+        268767232
+      ],
+      "size": [
+        4096
+      ],
+      "r": [
+        true
+      ],
+      "w": [
+        true
+      ],
+      "x": [
+        false
+      ],
+      "c": [
+        false
+      ],
+      "a": [
+        true
+      ],
+      "names": [
+        "activespm-ctrl-1@10051000"
+      ]
+    },
+    {
+      "base": [
+        1879048192
+      ],
+      "size": [
+        1048576
+      ],
+      "r": [
+        true
+      ],
+      "w": [
+        true
+      ],
+      "x": [
+        false
+      ],
+      "c": [
+        false
+      ],
+      "a": [
+        false
+      ],
+      "names": [
+        "memory@70000000"
+      ]
+    },
+    {
+      "base": [
+        1880096768
+      ],
+      "size": [
+        1048576
+      ],
+      "r": [
+        true
+      ],
+      "w": [
+        true
+      ],
+      "x": [
+        false
+      ],
+      "c": [
+        false
+      ],
+      "a": [
+        false
+      ],
+      "names": [
+        "memory@70100000"
+      ]
+    }
+  ],
+  "control_registers": {
+    "0x00": "COMMAND (write-only, not written by this test)",
+    "0x08": "EXTERNAL_ADDR",
+    "0x10": "LOCAL_OFFSET",
+    "0x18": "BYTE_COUNT",
+    "0x20": "STATUS",
+    "0x28": "BYTES_COMPLETED",
+    "0x30": "ERROR_CODE"
+  },
+  "reference_source_sha256": {
+    "Control.scala": "49235a07d104c2644b1941f29a0a8e4a50c13052c5639c3eab134cff4749ab70",
+    "Scratchpad.scala": "1abb67e7afff36983905904769de50041774ed8b8bd1f24d591525df4625846b",
+    "Integration.scala": "c53c9b9c5f25218303bc0488e3d34d458b9737c4877504e33491026a52991931",
+    "Parameters.scala": "f391d088275a7296c1c6ba7f991c19c9cad6d513e296de3746e53f3701d9e6f4"
+  }
+}

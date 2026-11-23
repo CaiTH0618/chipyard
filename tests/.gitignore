@@ -3,3 +3,25 @@
 *.dump
 *.img
 libgloss/
+
+# Local test caches
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# Local build and packaging outputs
+build/
+dist/
+*.o
+*.a
+*.so
+*.elf
+*.map
+*.dis
+
+# Logs and packaged copies
+*.log
+*.zip
+*.tar
+*.tar.*
+*.tgz

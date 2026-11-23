@@ -1,0 +1,2 @@
+#define FULL_COUNT 120
+#define FULL_ARENA_BYTES 2642624
