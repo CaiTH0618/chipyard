@@ -1,0 +1,58 @@
+{
+  "top": "MemTile",
+  "interconnect": {
+    "data_bits": 512,
+    "beat_bytes": 64,
+    "payload_bits": 577,
+    "virtual_channels": 5,
+    "buffer_depth": 2,
+    "local_scratchpad_bits": 256,
+    "mem_dma_in_flight": 64,
+    "mem_dma_buffer_bytes": 4096,
+    "mem_dma_local_ports": 2,
+    "mem_dma_local_in_flight": 16,
+    "desc_queue_depth": 0,
+    "output_queues": true,
+    "mesh_columns": 8,
+    "mesh_rows": 5,
+    "interface_data_bits": {
+      "io_dma_": 512,
+      "io_scratchpad_": 512
+    }
+  },
+  "macs_per_cycle": 0,
+  "int8_macs_per_cycle": 0,
+  "fp32_simd_lanes": 0,
+  "fp32_fmas_per_cycle": 0,
+  "fp32_flops_per_cycle": 0,
+  "fp32_latency_cycles": 0,
+  "simd_scratchpad_connected": false,
+  "fp32_vector_registers": 0,
+  "fp32_vector_register_bytes": 0,
+  "sram_bytes": 524288,
+  "resource_counts": {
+    "Gemmini": 0,
+    "MacUnit": 0,
+    "ActiveSPM": 1,
+    "ActiveSPMDMA": 1,
+    "ActiveSPMConcurrentDMA": 1,
+    "ActiveSPMByteDMA": 1,
+    "ActiveSPMOrderedAccess": 1,
+    "TLRAM": 8,
+    "Router": 0,
+    "ActiveSPMDeSCAdmission": 0,
+    "RocketTile": 0,
+    "ReRoCCManagerTile": 0,
+    "TLMonitor": 0
+  },
+  "sram_macros": [
+    {
+      "name": "mem_ext",
+      "instances": 8,
+      "depth": 2048,
+      "width_bits": 256
+    }
+  ],
+  "rtl_source_files": 34,
+  "rtl_source_bytes": 2011204
+}

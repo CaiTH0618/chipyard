@@ -1,0 +1,257 @@
+{
+  "abc_script": "strash; dretime; map\n",
+  "preprocessing": {
+    "liberty": "8d540a4d4cf6d09d27c87ad067857a9c0c2eeb023ab7a56e058cd3113db4e9b1",
+    "script": "read_liberty -lib \"/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/tech/NangateOpenCellLibrary_typical.lib\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/plusarg_reader.v\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/mem_8x579.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLEFromNoC.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/OutputUnit.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/SwitchArbiter_7.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputUnit_2.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/RotatingSingleVCAllocator.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/RotatingSingleVCAllocator_1.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/IngressUnit.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/IngressUnit_1.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Router_1.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLMasterToNoC.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InterconnectSwitch.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/mem_2x579.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue1_TLBundleA_a32d512s11k2z3c.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputBuffer.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/SwitchAllocator.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/SwitchArbiter_1.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/ram_3x2.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLAFromNoC.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue2_Flit.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLDToNoC.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/SwitchArbiter.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/IngressUnit_4.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/EgressUnit_1.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/EgressUnit_2.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputUnit_4.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/SwitchAllocator_1.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/ram_2x607.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/OutputUnit_3.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLCFromNoC.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLDFromNoC.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputBuffer_4.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/mem_10x579.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/RouteComputer_1.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Router.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue1_BaseFlit.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue1_TLBundleD_a32d512s11k2z3c.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLSlaveToNoC.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/ram_3x579.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue3_EgressFlit_1.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLAToNoC.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue2_RouteComputerResp.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputBuffer_2.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/ram_2x10.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputUnit_3.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Switch_1.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/EgressUnit.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Switch.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLBFromNoC.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputUnit.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue1_VCAllocResp.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Arbiter5_RouteComputerReq.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputUnit_1.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/SwitchArbiter_11.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue3_EgressFlit.sv\"\nread_verilog -sv -DSYNTHESIS \"/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/srams.blackboxes.v\"\nhierarchy -check -top InterconnectSwitch\nsynth -top InterconnectSwitch -noabc\nwrite_rtlil \"/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/switch-mem/logic/generic.il\"\n",
+    "sources": [
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/plusarg_reader.v",
+        "08de6a683d07eb22091e793d97fdcfa74b14ec35cac33ad0e2efce0a8e0337bc"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/mem_8x579.sv",
+        "2daeeb7044974f53fd1a3b04578154c72631d86676b9ba2f44fcf59846d1790e"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLEFromNoC.sv",
+        "710245572d573c3b9a544e0fd1268f886ec9806dd3c5df3e2bf4f635cd3b3dbb"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/OutputUnit.sv",
+        "621e7da445a95c7b9de6569667a2a42022c0d62bb7e91e8722bee9a7021fd959"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/SwitchArbiter_7.sv",
+        "378568aa01b1d6611b6a903290d87bd4944201a1d6a93a89b252e1df84162eeb"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputUnit_2.sv",
+        "fb84d8cd3742c32c4d4f63399298a51bca307543fa6e9ee00369a646d6b34a7f"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/RotatingSingleVCAllocator.sv",
+        "d870e0b5eddee2a1dd9ddacc6bd2311396bff8ca7cc78b287298937f18c4ca2f"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/RotatingSingleVCAllocator_1.sv",
+        "9f9a4e4470e1be1b2e9ba9898731cec1b1f285822822d630f46c2e1d0cf2d857"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/IngressUnit.sv",
+        "e161bcaccc1d2c90e28f934d78be18a679f6974c72f0842f08376f5bbf079d17"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/IngressUnit_1.sv",
+        "5a1c81cae8c4e132015cd46fc5be31fe6806c898f2303fc59a7afb9cb9734b40"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Router_1.sv",
+        "70644a6b98eab8374231ef63824e9177d1c58b278ef298fbf56b19e6653be129"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLMasterToNoC.sv",
+        "49bd94b4fdba41777f904425ff3f876e37b4c5b9c7acc2d90551bf3429797939"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InterconnectSwitch.sv",
+        "f47322b6037516d4d9aa00feaa572276cf83788a833206f051619b5d99b2ab0e"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/mem_2x579.sv",
+        "704398b4c8097685476407f758cc3f2928d46661a9705653527d3da831f18241"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue1_TLBundleA_a32d512s11k2z3c.sv",
+        "536cad1d999f79a7d863a9e79e3bf29eea9f7540f63a6b21fe37c150d7759940"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputBuffer.sv",
+        "7f93a0b6c43c5a0ef8e369f805b0bdebfab12be7b69b7c4a09809fcb711fbcf5"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/SwitchAllocator.sv",
+        "97fe19ca8e9adfaf9edb42e224d1c6acd80a24d4ea47d783caa2f2c5249ce0e6"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/SwitchArbiter_1.sv",
+        "74fe4a40631786a351e7099e7ca04e82d80e6b7907820271824f60705d67fd40"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/ram_3x2.sv",
+        "7bc40e65abf747a51bf2288c8b73b449e77b355667d6fe9b013ba8807e0bce40"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLAFromNoC.sv",
+        "ff7fb5ce3a2863ff6f3319b533d5154d07006613f3e6eeab69a1070918b35a93"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue2_Flit.sv",
+        "042aca98ef171d0f9ec7380329f48d539e7ad020533c54eacd59e960d6e8506c"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLDToNoC.sv",
+        "e1e7289f5f517280b869107685c7265bc7c5fc09cae8d95cc1825a483070067d"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/SwitchArbiter.sv",
+        "152a7c81c372b36802e3b5f802929e68dd413c6befb270705ec7b47a40b9b873"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/IngressUnit_4.sv",
+        "80e6e0dced81aad2700e56d740c7423235de6674f1bf3322c1e6156b69077445"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/EgressUnit_1.sv",
+        "9060108ddb70504317da92237c7f55c239979f417fe3c7ed45d466afcb83c11e"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/EgressUnit_2.sv",
+        "b1773e18ced0043835be555425df6a2d432e4e96e5413cc16d3f056cede01a30"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputUnit_4.sv",
+        "2271b20bb959237863c158d158b50f679fc9df0b4ae2f9e2c8916018ffe39cee"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/SwitchAllocator_1.sv",
+        "1aa2b7f02a8917cf4989fe70c974da3f906b118b9011904994ce9b9709675c0e"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/ram_2x607.sv",
+        "4b45a92d774821ea938ea0d0d4ddce435a6020067628785b122dc4c977d77599"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/OutputUnit_3.sv",
+        "b38a281196f2c3edce8ec61617b218be7138fef9c4c14e52d34bd7c84fc7008b"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLCFromNoC.sv",
+        "50c69ccc8d36a6a8e563b1b6de88b361406a75c552d88ed2ab740c04c3b7cf1b"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLDFromNoC.sv",
+        "c6438eecd8a2973a1c78aea4482dd7060261f443b4257eaca2833c1d144afc56"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputBuffer_4.sv",
+        "77117f1ffc1947af2a06df61a3be7fe5d515d7214de60aa4051943009ef714b1"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/mem_10x579.sv",
+        "13d41bab857621628f258db432d5aac913207ccb9d1e93091ded7ee4fc4ad892"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/RouteComputer_1.sv",
+        "907efb82a606c797cc65f8fb9ba19db5c06fe664ede70821f7d257477f1abf24"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Router.sv",
+        "d346767fb2fcb47baa5689b225278d3d0c3e99d99808f7549de30961264ca8bf"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue1_BaseFlit.sv",
+        "a669ddd7b16a2f9be0a1843ce231678e85731a2b423dc68d91e5e4437fa237b5"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue1_TLBundleD_a32d512s11k2z3c.sv",
+        "5cc2dbdd3eac747f0ae066f1fa809a47d1d8d51505d74ffbe686657663879c92"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLSlaveToNoC.sv",
+        "2e49b891a9cad29632e6b07a00374a5ec6a79e164b0444b311a8785938b75473"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/ram_3x579.sv",
+        "853cf4cc103d15175cbcb7231d5d3ce280f9e71cec7c4bc26a28eb08e85200d7"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue3_EgressFlit_1.sv",
+        "efb6fa81b9f0082c7bc4cf15f67f44ddd921f34cbfb72f22b93a9f36e85c1cd3"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLAToNoC.sv",
+        "07ba55613435da09b150b8d8f8c83a13204108d0b219ddb4105549d7259fe92b"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue2_RouteComputerResp.sv",
+        "339e1963ed34700b6c0d27791380297b522bed34f0269d00f589775a2c965981"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputBuffer_2.sv",
+        "f0c1ea85ec2a60b8ac1056bf8ef3247416746d90d18aac6702c8735ac91e7ed2"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/ram_2x10.sv",
+        "f848036aa8da494592c0184b6db6978b5af6cd4d0a74b53f562d0950e3e86106"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputUnit_3.sv",
+        "511b24a063ecc472263400968851c5a579f499260329b32d90af0c8f2cca4935"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Switch_1.sv",
+        "8b5e3d64a4152b5212402e6fa2d6d0f06b1c7fd57fa41a6b64dae97f34d1fdca"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/EgressUnit.sv",
+        "0314155df76d2f977ab74259ede61ecc76cdeeab324949486b8920f7fbb4bc85"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Switch.sv",
+        "16580ecf479cd2bd5448c37148a40db5c0b8ff126ffae40d6d8c6a04de75701c"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/TLBFromNoC.sv",
+        "ca3283f39fa85cb526ea55421e22f7ccbe843e7610c55dca6879b82cdb7a1a48"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputUnit.sv",
+        "0bfd2e3d707baf5f169111f1233fc7fe259a0f053c716b773606940c30dcb625"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue1_VCAllocResp.sv",
+        "0952f132bc072de29ff9037ce04beec1591499e1ca0c5d68913cee824b09b7c0"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Arbiter5_RouteComputerReq.sv",
+        "6961b8bc9f3fcc5f8c334c958922301ac10aab924ac46e316ccee1212dc9d0e0"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/InputUnit_1.sv",
+        "858a0aa2fc1f32fc47d1fa5f76ceafe64cb88f0aafd9793f37519b5b21a17ab3"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/SwitchArbiter_11.sv",
+        "bc09dc9d04befc73d7ff4abb8ac18e824596609a0f06a6ba5fe5a7e1f6c887d1"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/gen-collateral/Queue3_EgressFlit.sv",
+        "932e7fb5c5d0a31d17ae89cc5abdb7198f97d1e3099e68ea9e7cead6e8668671"
+      ],
+      [
+        "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemSwitchConfig/srams.blackboxes.v",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    ],
+    "tool": {
+      "abc_engine_sha256": "2c2c72b9977a0b77a80856f533f23b1c884a1359f9044a8ebdc7033605e976ae",
+      "cacti_45nm_data_sha256": "849f3f6dec7c517c7e72ae41a8e2bfcb2e20f9d00344fc10521ad5c3b2782509",
+      "cacti_executable_sha256": "561d2ba0110399f36bfd46507eaec1bec9f4c578b4df0be65c07a5152da8ade4",
+      "oss_cad_suite_release": "20261112",
+      "yosys_engine_sha256": "965a667047168dd80a9d65a572572cb3b17bf5bfdcdde127d8888374cf7879cd",
+      "yosys_executable_sha256": "7c3e3396b38c129dd7485be5a0a0f0da8e495a94c8fd486059e3bea043a588d6",
+      "yosys_version": "Yosys 0.70+385 (git sha1 098e46a36, Release, Clang /usr/bin/clang++ 21.1.8)"
+    }
+  },
+  "preprocessing_fingerprint": "885ca3e2682a4867d75adfe4325adcd59b217a241c4a3ca338f365c4c249ec51",
+  "script": "read_rtlil \"/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/switch-mem/logic/generic.il\"\nchformal -remove\nopt -purge\ndfflibmap -liberty \"/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/tech/NangateOpenCellLibrary_typical.lib\"\nabc -liberty \"/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/tech/NangateOpenCellLibrary_typical.lib\" -script \"/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/switch-mem/logic/abc-fast.script\"\nclean\ncheck -assert -mapped\ntee -o \"/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/switch-mem/logic/stat.json\" stat -json -liberty \"/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/tech/NangateOpenCellLibrary_typical.lib\" -top InterconnectSwitch\nwrite_json \"/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/switch-mem/logic/mapped.json\"\nwrite_verilog -noattr \"/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/switch-mem/logic/mapped.v\"\n",
+  "tool": {
+    "abc_engine_sha256": "2c2c72b9977a0b77a80856f533f23b1c884a1359f9044a8ebdc7033605e976ae",
+    "cacti_45nm_data_sha256": "849f3f6dec7c517c7e72ae41a8e2bfcb2e20f9d00344fc10521ad5c3b2782509",
+    "cacti_executable_sha256": "561d2ba0110399f36bfd46507eaec1bec9f4c578b4df0be65c07a5152da8ade4",
+    "oss_cad_suite_release": "20261112",
+    "yosys_engine_sha256": "965a667047168dd80a9d65a572572cb3b17bf5bfdcdde127d8888374cf7879cd",
+    "yosys_executable_sha256": "7c3e3396b38c129dd7485be5a0a0f0da8e495a94c8fd486059e3bea043a588d6",
+    "yosys_version": "Yosys 0.70+385 (git sha1 098e46a36, Release, Clang /usr/bin/clang++ 21.1.8)"
+  }
+}

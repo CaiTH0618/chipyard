@@ -1,0 +1,16 @@
+# Original tool and verification output retained with the measurements.
+!/xdna2-area-45nm/cacti/*/cacti.log
+!/xdna2-desc-validation/area.log
+!/xdna2-memtile-rtl-check/run.log
+!/xdna2-memtile-desc-rtl-check/run.log
+!/xdna2-simd-rtl-check/simulation.log
+
+# Keep synthesis intermediates out of the result archive.
+generic.il
+mapped.json
+mapped.v
+generic-cache.json
+cache.json
+workflow.lock
+*.lib
+*.download

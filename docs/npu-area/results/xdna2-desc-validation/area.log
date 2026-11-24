@@ -1,0 +1,14 @@
+
+Analyzing mem (MemTile)
+CACTI cache hit: 2048 x 256
+Running: /home/caitianhao/oss-cad-suite/bin/yosys -Q -T -s /home/caitianhao/proj/chipyard/build/xdna2-desc-area-45nm/mem/logic/generic.ys
+Running: /home/caitianhao/oss-cad-suite/bin/yosys -Q -T -s /home/caitianhao/proj/chipyard/build/xdna2-desc-area-45nm/mem/logic/synth.ys
+mem: logic 0.616859 + SRAM 1.530424 = 2.147283 mm^2
+
+Analyzing mem-desc (MemTile)
+CACTI cache hit: 2048 x 256
+Running: /home/caitianhao/oss-cad-suite/bin/yosys -Q -T -s /home/caitianhao/proj/chipyard/build/xdna2-desc-area-45nm/mem-desc/logic/generic.ys
+Running: /home/caitianhao/oss-cad-suite/bin/yosys -Q -T -s /home/caitianhao/proj/chipyard/build/xdna2-desc-area-45nm/mem-desc/logic/synth.ys
+mem-desc: logic 0.637215 + SRAM 1.530424 = 2.167639 mm^2
+
+Reports: /home/caitianhao/proj/chipyard/build/xdna2-desc-area-45nm/area-report.md

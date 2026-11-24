@@ -1,0 +1,455 @@
+{
+  "instance_name": "MemTile",
+  "module_name": "MemTile",
+  "instances": [
+    {
+      "instance_name": "active",
+      "module_name": "ActiveSPM",
+      "instances": [
+        {
+          "instance_name": "control",
+          "module_name": "ActiveSPMControl",
+          "instances": []
+        },
+        {
+          "instance_name": "dma",
+          "module_name": "ActiveSPMDMA",
+          "instances": [
+            {
+              "instance_name": "buffer",
+              "module_name": "TLBuffer_a32d512s6k1z3u",
+              "instances": [
+                {
+                  "instance_name": "nodeOut_a_q",
+                  "module_name": "Queue2_TLBundleA_a32d512s6k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x624",
+                      "instances": []
+                    }
+                  ]
+                },
+                {
+                  "instance_name": "nodeIn_d_q",
+                  "module_name": "Queue2_TLBundleD_a32d512s6k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x523",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "buffer_1",
+              "module_name": "TLBuffer_a31d256s4k1z3u",
+              "instances": [
+                {
+                  "instance_name": "nodeOut_a_q",
+                  "module_name": "Queue2_TLBundleA_a31d256s4k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x329",
+                      "instances": []
+                    }
+                  ]
+                },
+                {
+                  "instance_name": "nodeIn_d_q",
+                  "module_name": "Queue2_TLBundleD_a31d256s4k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x265",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "buffer_2",
+              "module_name": "TLBuffer_a31d256s4k1z3u",
+              "instances": [
+                {
+                  "instance_name": "nodeOut_a_q",
+                  "module_name": "Queue2_TLBundleA_a31d256s4k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x329",
+                      "instances": []
+                    }
+                  ]
+                },
+                {
+                  "instance_name": "nodeIn_d_q",
+                  "module_name": "Queue2_TLBundleD_a31d256s4k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x265",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "byte_0",
+              "module_name": "ActiveSPMByteDMA",
+              "instances": []
+            },
+            {
+              "instance_name": "fast",
+              "module_name": "ActiveSPMConcurrentDMA",
+              "instances": []
+            }
+          ]
+        },
+        {
+          "instance_name": "scratchpad",
+          "module_name": "ActiveSPMScratchpad",
+          "instances": [
+            {
+              "instance_name": "xbar",
+              "module_name": "TLXbar_i3_o8_a31d256s6k1z3u",
+              "instances": []
+            },
+            {
+              "instance_name": "ordered",
+              "module_name": "ActiveSPMOrderedAccess",
+              "instances": [
+                {
+                  "instance_name": "requests",
+                  "module_name": "Queue8_TLBundleA_a31d256s7k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_8x332",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "activespm_spad_0_bank_0",
+              "module_name": "TLRAM",
+              "instances": [
+                {
+                  "instance_name": "mem",
+                  "module_name": "mem",
+                  "instances": [
+                    {
+                      "instance_name": "mem_ext",
+                      "module_name": "mem_ext",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "buffer",
+              "module_name": "TLBuffer_a31d256s6k1z3u",
+              "instances": [
+                {
+                  "instance_name": "nodeIn_d_q",
+                  "module_name": "Queue2_TLBundleD_a31d256s6k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x273",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "activespm_spad_0_bank_1",
+              "module_name": "TLRAM",
+              "instances": [
+                {
+                  "instance_name": "mem",
+                  "module_name": "mem",
+                  "instances": [
+                    {
+                      "instance_name": "mem_ext",
+                      "module_name": "mem_ext",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "buffer_1",
+              "module_name": "TLBuffer_a31d256s6k1z3u",
+              "instances": [
+                {
+                  "instance_name": "nodeIn_d_q",
+                  "module_name": "Queue2_TLBundleD_a31d256s6k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x273",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "activespm_spad_0_bank_2",
+              "module_name": "TLRAM",
+              "instances": [
+                {
+                  "instance_name": "mem",
+                  "module_name": "mem",
+                  "instances": [
+                    {
+                      "instance_name": "mem_ext",
+                      "module_name": "mem_ext",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "buffer_2",
+              "module_name": "TLBuffer_a31d256s6k1z3u",
+              "instances": [
+                {
+                  "instance_name": "nodeIn_d_q",
+                  "module_name": "Queue2_TLBundleD_a31d256s6k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x273",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "activespm_spad_0_bank_3",
+              "module_name": "TLRAM",
+              "instances": [
+                {
+                  "instance_name": "mem",
+                  "module_name": "mem",
+                  "instances": [
+                    {
+                      "instance_name": "mem_ext",
+                      "module_name": "mem_ext",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "buffer_3",
+              "module_name": "TLBuffer_a31d256s6k1z3u",
+              "instances": [
+                {
+                  "instance_name": "nodeIn_d_q",
+                  "module_name": "Queue2_TLBundleD_a31d256s6k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x273",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "activespm_spad_0_bank_4",
+              "module_name": "TLRAM",
+              "instances": [
+                {
+                  "instance_name": "mem",
+                  "module_name": "mem",
+                  "instances": [
+                    {
+                      "instance_name": "mem_ext",
+                      "module_name": "mem_ext",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "buffer_4",
+              "module_name": "TLBuffer_a31d256s6k1z3u",
+              "instances": [
+                {
+                  "instance_name": "nodeIn_d_q",
+                  "module_name": "Queue2_TLBundleD_a31d256s6k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x273",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "activespm_spad_0_bank_5",
+              "module_name": "TLRAM",
+              "instances": [
+                {
+                  "instance_name": "mem",
+                  "module_name": "mem",
+                  "instances": [
+                    {
+                      "instance_name": "mem_ext",
+                      "module_name": "mem_ext",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "buffer_5",
+              "module_name": "TLBuffer_a31d256s6k1z3u",
+              "instances": [
+                {
+                  "instance_name": "nodeIn_d_q",
+                  "module_name": "Queue2_TLBundleD_a31d256s6k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x273",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "activespm_spad_0_bank_6",
+              "module_name": "TLRAM",
+              "instances": [
+                {
+                  "instance_name": "mem",
+                  "module_name": "mem",
+                  "instances": [
+                    {
+                      "instance_name": "mem_ext",
+                      "module_name": "mem_ext",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "buffer_6",
+              "module_name": "TLBuffer_a31d256s6k1z3u",
+              "instances": [
+                {
+                  "instance_name": "nodeIn_d_q",
+                  "module_name": "Queue2_TLBundleD_a31d256s6k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x273",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "activespm_spad_0_bank_7",
+              "module_name": "TLRAM",
+              "instances": [
+                {
+                  "instance_name": "mem",
+                  "module_name": "mem",
+                  "instances": [
+                    {
+                      "instance_name": "mem_ext",
+                      "module_name": "mem_ext",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "buffer_7",
+              "module_name": "TLBuffer_a31d256s6k1z3u",
+              "instances": [
+                {
+                  "instance_name": "nodeIn_d_q",
+                  "module_name": "Queue2_TLBundleD_a31d256s6k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x273",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "instance_name": "fixer",
+      "module_name": "TLFIFOFixer",
+      "instances": []
+    },
+    {
+      "instance_name": "fragmenter",
+      "module_name": "TLFragmenter",
+      "instances": [
+        {
+          "instance_name": "repeater",
+          "module_name": "Repeater_TLBundleA_a31d256s5k1z3u",
+          "instances": []
+        }
+      ]
+    },
+    {
+      "instance_name": "widget",
+      "module_name": "TLWidthWidget64",
+      "instances": [
+        {
+          "instance_name": "repeated_repeater",
+          "module_name": "Repeater_TLBundleA_a31d512s5k1z3u",
+          "instances": []
+        }
+      ]
+    },
+    {
+      "instance_name": "shrinker",
+      "module_name": "TLSourceShrinker",
+      "instances": [
+        {
+          "instance_name": "sourceIdMap_ext",
+          "module_name": "sourceIdMap_32x11",
+          "instances": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+    "data_bits": 512,
+    "beat_bytes": 64,
+    "payload_bits": 577,
+    "virtual_channels": 5,
+    "buffer_depth": 2,
+    "local_scratchpad_bits": 256,
+    "mem_dma_in_flight": 64,
+    "mem_dma_buffer_bytes": 4096,
+    "mem_dma_local_ports": 2,
+    "mem_dma_local_in_flight": 16,
+    "desc_queue_depth": 0,
+    "output_queues": true,
+    "mesh_columns": 8,
+    "mesh_rows": 5
+  }

@@ -1,0 +1,14 @@
+{
+  "cycles": 1745,
+  "weighted_bursts": 32,
+  "weighted_decoder": 8,
+  "previously_committed_decoder": 1,
+  "inference_after_pause": 96,
+  "peak_decoder_in_flight": 16,
+  "inference_bytes": 8192,
+  "decoder_bytes": 5632,
+  "passed": true,
+  "software_tests_run": false,
+  "rtl": "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2DeSCMemTileConfig",
+  "output": "/home/caitianhao/proj/chipyard/build/xdna2-memtile-desc-rtl-check"
+}

@@ -1,0 +1,14 @@
+{
+  "access_time_ns": 0.370184,
+  "area_mm2": 0.0537792,
+  "config": "/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/cacti/ad879f3874c86d1d6c29/sram.cfg",
+  "cycle_time_ns": 0.318311,
+  "elapsed_seconds": 0.032,
+  "fingerprint": "ad879f3874c86d1d6c2903d67079ea6365e10bfd31f6de29a3669238020bf086",
+  "log": "/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/cacti/ad879f3874c86d1d6c29/cacti.log",
+  "model": "CACTI 45nm ITRS HP, one physical macro, no ECC, area objective",
+  "offchip_io_report_used": false,
+  "read_energy_nj": 0.0116232,
+  "temperature_kelvin": 300,
+  "write_energy_nj": 0.0361387
+}

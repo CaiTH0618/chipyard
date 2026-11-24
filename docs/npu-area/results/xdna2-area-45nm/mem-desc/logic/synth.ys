@@ -1,0 +1,10 @@
+read_rtlil "/home/caitianhao/proj/chipyard/build/xdna2-desc-area-45nm/mem-desc/logic/generic.il"
+chformal -remove
+opt -purge
+dfflibmap -liberty "/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/tech/NangateOpenCellLibrary_typical.lib"
+abc -liberty "/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/tech/NangateOpenCellLibrary_typical.lib" -script "/home/caitianhao/proj/chipyard/build/xdna2-desc-area-45nm/mem-desc/logic/abc-fast.script"
+clean
+check -assert -mapped
+tee -o "/home/caitianhao/proj/chipyard/build/xdna2-desc-area-45nm/mem-desc/logic/stat.json" stat -json -liberty "/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/tech/NangateOpenCellLibrary_typical.lib" -top MemTile
+write_json "/home/caitianhao/proj/chipyard/build/xdna2-desc-area-45nm/mem-desc/logic/mapped.json"
+write_verilog -noattr "/home/caitianhao/proj/chipyard/build/xdna2-desc-area-45nm/mem-desc/logic/mapped.v"

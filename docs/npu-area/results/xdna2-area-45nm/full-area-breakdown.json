@@ -1,0 +1,557 @@
+{
+  "technology_nm": 45,
+  "interconnect": {
+    "beat_bytes": 64,
+    "buffer_depth": 2,
+    "data_bits": 512,
+    "local_scratchpad_bits": 256,
+    "mem_dma_buffer_bytes": 4096,
+    "mem_dma_in_flight": 64,
+    "mem_dma_local_in_flight": 16,
+    "mem_dma_local_ports": 2,
+    "mesh_columns": 8,
+    "mesh_rows": 5,
+    "output_queues": true,
+    "payload_bits": 577,
+    "virtual_channels": 5
+  },
+  "inventory": {
+    "aie": 32,
+    "mem": 8,
+    "switch": 40
+  },
+  "total_mm2": 179.62913332800002,
+  "logic_mm2": 142.428531728,
+  "sram_mm2": 37.2006016,
+  "major_partition": [
+    {
+      "block": "aie",
+      "component": "INT8 systolic array, alignment/transposer and pipelines",
+      "kind": "logic",
+      "per_block_mm2": 1.879322452,
+      "instances": 32,
+      "array_mm2": 60.138318464,
+      "percent_of_array": 33.47915638728177
+    },
+    {
+      "block": "aie",
+      "component": "Other Gemmini logic: DMA, storage control, scheduling and command loops",
+      "kind": "logic",
+      "per_block_mm2": 1.1676527519999997,
+      "instances": 32,
+      "array_mm2": 37.36488806399999,
+      "percent_of_array": 20.801129177510578
+    },
+    {
+      "block": "aie",
+      "component": "FP32 arithmetic and its pipeline",
+      "kind": "logic",
+      "per_block_mm2": 0.398455232,
+      "instances": 32,
+      "array_mm2": 12.750567424,
+      "percent_of_array": 7.098273641791536
+    },
+    {
+      "block": "aie",
+      "component": "FP32 vector register file, including read/write muxes",
+      "kind": "logic",
+      "per_block_mm2": 0.122543008,
+      "instances": 32,
+      "array_mm2": 3.921376256,
+      "percent_of_array": 2.1830402359285603
+    },
+    {
+      "block": "aie",
+      "component": "SIMD command engine, scoreboard and completions",
+      "kind": "logic",
+      "per_block_mm2": 0.003694207999999935,
+      "instances": 32,
+      "array_mm2": 0.11821465599999792,
+      "percent_of_array": 0.06581040269461179
+    },
+    {
+      "block": "aie",
+      "component": "Shared SRAM bank arbitration and access glue",
+      "kind": "logic",
+      "per_block_mm2": 0.010312554,
+      "instances": 32,
+      "array_mm2": 0.330001728,
+      "percent_of_array": 0.18371280976868154
+    },
+    {
+      "block": "aie",
+      "component": "AIE scratchpad SRAM",
+      "kind": "sram",
+      "per_block_mm2": 0.2151168,
+      "instances": 32,
+      "array_mm2": 6.8837376,
+      "percent_of_array": 3.8321944065890476
+    },
+    {
+      "block": "aie",
+      "component": "AIE accumulator SRAM",
+      "kind": "sram",
+      "per_block_mm2": 0.564796,
+      "instances": 32,
+      "array_mm2": 18.073472,
+      "percent_of_array": 10.06154829406103
+    },
+    {
+      "block": "mem",
+      "component": "MemTile DMA, control, bank interfaces and network adapters",
+      "kind": "logic",
+      "per_block_mm2": 0.616858522,
+      "instances": 8,
+      "array_mm2": 4.934868176,
+      "percent_of_array": 2.747253791504414
+    },
+    {
+      "block": "mem",
+      "component": "MemTile SRAM",
+      "kind": "sram",
+      "per_block_mm2": 1.530424,
+      "instances": 8,
+      "array_mm2": 12.243392,
+      "percent_of_array": 6.815927780291493
+    },
+    {
+      "block": "switch",
+      "component": "NoC router pairs and local protocol interfaces",
+      "kind": "logic",
+      "per_block_mm2": 0.571757424,
+      "instances": 40,
+      "array_mm2": 22.870296959999997,
+      "percent_of_array": 12.731953072578259
+    }
+  ],
+  "detailed_partition": [
+    {
+      "block": "aie",
+      "component": "INT8 MAC arithmetic (1024 units)",
+      "kind": "logic",
+      "per_block_mm2": 0.97922048,
+      "instances": 32,
+      "array_mm2": 31.33505536,
+      "percent_of_array": 17.444305820249475
+    },
+    {
+      "block": "aie",
+      "component": "INT8 fabric, alignment/transposer, PE registers and pipelines",
+      "kind": "logic",
+      "per_block_mm2": 0.9001019720000001,
+      "instances": 32,
+      "array_mm2": 28.803263104000003,
+      "percent_of_array": 16.03485056703229
+    },
+    {
+      "block": "aie",
+      "component": "Execute controller outside array/pipelines",
+      "kind": "logic",
+      "per_block_mm2": 0.029945215999999997,
+      "instances": 32,
+      "array_mm2": 0.9582469119999999,
+      "percent_of_array": 0.5334585176950422
+    },
+    {
+      "block": "aie",
+      "component": "Scratchpad/accumulator control, adders, data paths and queues (excluding DMA engines)",
+      "kind": "logic",
+      "per_block_mm2": 0.42974587599999997,
+      "instances": 32,
+      "array_mm2": 13.751868031999999,
+      "percent_of_array": 7.655700262656893
+    },
+    {
+      "block": "aie",
+      "component": "Gemmini DMA stream reader and tracking",
+      "kind": "logic",
+      "per_block_mm2": 0.07133827400000001,
+      "instances": 32,
+      "array_mm2": 2.2828247680000002,
+      "percent_of_array": 1.270854413037554
+    },
+    {
+      "block": "aie",
+      "component": "Gemmini DMA stream writer",
+      "kind": "logic",
+      "per_block_mm2": 0.04431693,
+      "instances": 32,
+      "array_mm2": 1.41814176,
+      "percent_of_array": 0.7894831610696996
+    },
+    {
+      "block": "aie",
+      "component": "Load/store command controllers",
+      "kind": "logic",
+      "per_block_mm2": 0.035377201999999996,
+      "instances": 32,
+      "array_mm2": 1.1320704639999999,
+      "percent_of_array": 0.6302265356549134
+    },
+    {
+      "block": "aie",
+      "component": "Reservation station",
+      "kind": "logic",
+      "per_block_mm2": 0.068147072,
+      "instances": 32,
+      "array_mm2": 2.180706304,
+      "percent_of_array": 1.2140048017812701
+    },
+    {
+      "block": "aie",
+      "component": "Matmul loop command controller",
+      "kind": "logic",
+      "per_block_mm2": 0.058873779999999994,
+      "instances": 32,
+      "array_mm2": 1.8839609599999998,
+      "percent_of_array": 1.0488059064227162
+    },
+    {
+      "block": "aie",
+      "component": "Convolution loop command controller",
+      "kind": "logic",
+      "per_block_mm2": 0.40150571999999995,
+      "instances": 32,
+      "array_mm2": 12.848183039999999,
+      "percent_of_array": 7.152616505998174
+    },
+    {
+      "block": "aie",
+      "component": "Frontend TLB and protection checks",
+      "kind": "logic",
+      "per_block_mm2": 0.007673035999999999,
+      "instances": 32,
+      "array_mm2": 0.24553715199999998,
+      "percent_of_array": 0.13669116331572614
+    },
+    {
+      "block": "aie",
+      "component": "Im2Col unit",
+      "kind": "logic",
+      "per_block_mm2": 0.0030316019999999996,
+      "instances": 32,
+      "array_mm2": 0.09701126399999999,
+      "percent_of_array": 0.054006419895629584
+    },
+    {
+      "block": "aie",
+      "component": "Performance counters",
+      "kind": "logic",
+      "per_block_mm2": 0.008433264,
+      "instances": 32,
+      "array_mm2": 0.269864448,
+      "percent_of_array": 0.15023423149697643
+    },
+    {
+      "block": "aie",
+      "component": "Other Gemmini command queues, arbiters and glue",
+      "kind": "logic",
+      "per_block_mm2": 0.009264780000000084,
+      "instances": 32,
+      "array_mm2": 0.29647296000000267,
+      "percent_of_array": 0.16504725848598714
+    },
+    {
+      "block": "aie",
+      "component": "FP32 arithmetic and its pipeline",
+      "kind": "logic",
+      "per_block_mm2": 0.398455232,
+      "instances": 32,
+      "array_mm2": 12.750567424,
+      "percent_of_array": 7.098273641791536
+    },
+    {
+      "block": "aie",
+      "component": "FP32 vector register file, including read/write muxes",
+      "kind": "logic",
+      "per_block_mm2": 0.122543008,
+      "instances": 32,
+      "array_mm2": 3.921376256,
+      "percent_of_array": 2.1830402359285603
+    },
+    {
+      "block": "aie",
+      "component": "SIMD command engine, scoreboard and completions",
+      "kind": "logic",
+      "per_block_mm2": 0.003694207999999935,
+      "instances": 32,
+      "array_mm2": 0.11821465599999792,
+      "percent_of_array": 0.06581040269461179
+    },
+    {
+      "block": "aie",
+      "component": "Shared SRAM bank arbitration and access glue",
+      "kind": "logic",
+      "per_block_mm2": 0.010312554,
+      "instances": 32,
+      "array_mm2": 0.330001728,
+      "percent_of_array": 0.18371280976868154
+    },
+    {
+      "block": "aie",
+      "component": "AIE scratchpad SRAM",
+      "kind": "sram",
+      "per_block_mm2": 0.2151168,
+      "instances": 32,
+      "array_mm2": 6.8837376,
+      "percent_of_array": 3.8321944065890476
+    },
+    {
+      "block": "aie",
+      "component": "AIE accumulator SRAM",
+      "kind": "sram",
+      "per_block_mm2": 0.564796,
+      "instances": 32,
+      "array_mm2": 18.073472,
+      "percent_of_array": 10.06154829406103
+    },
+    {
+      "block": "mem",
+      "component": "MemTile DMA including concurrent/byte engines and local/external buffers",
+      "kind": "logic",
+      "per_block_mm2": 0.494214966,
+      "instances": 8,
+      "array_mm2": 3.953719728,
+      "percent_of_array": 2.201045929882971
+    },
+    {
+      "block": "mem",
+      "component": "MemTile control registers",
+      "kind": "logic",
+      "per_block_mm2": 0.004006758,
+      "instances": 8,
+      "array_mm2": 0.032054064,
+      "percent_of_array": 0.017844579777306933
+    },
+    {
+      "block": "mem",
+      "component": "MemTile bank crossbar and arbitration",
+      "kind": "logic",
+      "per_block_mm2": 0.017161788,
+      "instances": 8,
+      "array_mm2": 0.137294304,
+      "percent_of_array": 0.07643209175279086
+    },
+    {
+      "block": "mem",
+      "component": "MemTile SRAM bank access logic and response registers",
+      "kind": "logic",
+      "per_block_mm2": 0.013783056,
+      "instances": 8,
+      "array_mm2": 0.110264448,
+      "percent_of_array": 0.06138450147652766
+    },
+    {
+      "block": "mem",
+      "component": "MemTile pipelined ordered global ingress",
+      "kind": "logic",
+      "per_block_mm2": 0.038718694,
+      "instances": 8,
+      "array_mm2": 0.309749552,
+      "percent_of_array": 0.17243837136062004
+    },
+    {
+      "block": "mem",
+      "component": "MemTile bank response queues",
+      "kind": "logic",
+      "per_block_mm2": 0.036310064,
+      "instances": 8,
+      "array_mm2": 0.290480512,
+      "percent_of_array": 0.16171124728948455
+    },
+    {
+      "block": "mem",
+      "component": "MemTile 512-to-256-bit width adaptation",
+      "kind": "logic",
+      "per_block_mm2": 0.008444436,
+      "instances": 8,
+      "array_mm2": 0.067555488,
+      "percent_of_array": 0.03760831372305556
+    },
+    {
+      "block": "mem",
+      "component": "MemTile request fragmentation",
+      "kind": "logic",
+      "per_block_mm2": 0.000818216,
+      "instances": 8,
+      "array_mm2": 0.006545728,
+      "percent_of_array": 0.0036440235939053395
+    },
+    {
+      "block": "mem",
+      "component": "MemTile outer FIFO adapter",
+      "kind": "logic",
+      "per_block_mm2": 0.0,
+      "instances": 8,
+      "array_mm2": 0.0,
+      "percent_of_array": 0.0
+    },
+    {
+      "block": "mem",
+      "component": "MemTile source-ID remapping",
+      "kind": "logic",
+      "per_block_mm2": 0.0034005439999999997,
+      "instances": 8,
+      "array_mm2": 0.027204351999999998,
+      "percent_of_array": 0.01514473264775223
+    },
+    {
+      "block": "mem",
+      "component": "MemTile SRAM",
+      "kind": "sram",
+      "per_block_mm2": 1.530424,
+      "instances": 8,
+      "array_mm2": 12.243392,
+      "percent_of_array": 6.815927780291493
+    },
+    {
+      "block": "switch",
+      "component": "NoC input-buffer storage, muxes and per-VC queues",
+      "kind": "logic",
+      "per_block_mm2": 0.46190368,
+      "instances": 40,
+      "array_mm2": 18.4761472,
+      "percent_of_array": 10.285718612393927
+    },
+    {
+      "block": "switch",
+      "component": "NoC payload crossbars",
+      "kind": "logic",
+      "per_block_mm2": 0.01806805,
+      "instances": 40,
+      "array_mm2": 0.722722,
+      "percent_of_array": 0.40234119410926555
+    },
+    {
+      "block": "switch",
+      "component": "NoC route computation, VC allocation and switch allocation",
+      "kind": "logic",
+      "per_block_mm2": 0.0027645379999999995,
+      "instances": 40,
+      "array_mm2": 0.11058151999999999,
+      "percent_of_array": 0.061561016273501606
+    },
+    {
+      "block": "switch",
+      "component": "NoC output/credit control",
+      "kind": "logic",
+      "per_block_mm2": 0.0006160559999999999,
+      "instances": 40,
+      "array_mm2": 0.024642239999999996,
+      "percent_of_array": 0.013718398315157289
+    },
+    {
+      "block": "switch",
+      "component": "NoC local terminal ingress/egress units",
+      "kind": "logic",
+      "per_block_mm2": 0.038977512,
+      "instances": 40,
+      "array_mm2": 1.55910048,
+      "percent_of_array": 0.8679552426237599
+    },
+    {
+      "block": "switch",
+      "component": "NoC local TileLink packet interface",
+      "kind": "logic",
+      "per_block_mm2": 0.0064398599999999995,
+      "instances": 40,
+      "array_mm2": 0.2575944,
+      "percent_of_array": 0.14340346425300432
+    },
+    {
+      "block": "switch",
+      "component": "NoC remaining input-unit/router state and control",
+      "kind": "logic",
+      "per_block_mm2": 0.04298772800000006,
+      "instances": 40,
+      "array_mm2": 1.7195091200000023,
+      "percent_of_array": 0.9572551446096471
+    }
+  ],
+  "physical_sram_macros": [
+    {
+      "block": "aie",
+      "depth": 512,
+      "width_bits": 256,
+      "capacity_bytes_each": 16384,
+      "macros_per_block": 4,
+      "macros_in_array": 128,
+      "area_mm2_each": 0.0537792,
+      "area_mm2_array": 6.8837376
+    },
+    {
+      "block": "aie",
+      "depth": 128,
+      "width_bits": 1024,
+      "capacity_bytes_each": 16384,
+      "macros_per_block": 4,
+      "macros_in_array": 128,
+      "area_mm2_each": 0.141199,
+      "area_mm2_array": 18.073472
+    },
+    {
+      "block": "mem",
+      "depth": 2048,
+      "width_bits": 256,
+      "capacity_bytes_each": 65536,
+      "macros_per_block": 8,
+      "macros_in_array": 64,
+      "area_mm2_each": 0.191303,
+      "area_mm2_array": 12.243392
+    }
+  ],
+  "note": "Each partition separately sums to the total; do not add the major and detailed partitions together.",
+  "noc_accounting": {
+    "method": "40 copies of the measured interior switch at (3,2)",
+    "mesh_geometry": {
+      "interior": 18,
+      "noncorner_edge": 18,
+      "corner": 4
+    },
+    "location_samples_mm2": {
+      "switch": 0.571757424,
+      "switch-corner": 0.409222646,
+      "switch-edge": 0.459559688,
+      "switch-mem": 0.590049446
+    },
+    "position_exact": false,
+    "limitation": "The four samples do not cover every coordinate or external host/DRAM/control interface; this is not an upper/lower bound."
+  },
+  "standard_cell_instances": 112731672,
+  "flip_flop_instances": 9845200,
+  "source_report": "area-report.json",
+  "source_report_sha256": "654652fad4e5a3d41b83f638dda7d6e831a09383af1d9979372b6709a3df1a47",
+  "provenance": {
+    "abc_engine_sha256": "2c2c72b9977a0b77a80856f533f23b1c884a1359f9044a8ebdc7033605e976ae",
+    "cacti_45nm_data_sha256": "849f3f6dec7c517c7e72ae41a8e2bfcb2e20f9d00344fc10521ad5c3b2782509",
+    "cacti_executable_sha256": "561d2ba0110399f36bfd46507eaec1bec9f4c578b4df0be65c07a5152da8ade4",
+    "cacti_temperature_kelvin": 300,
+    "cacti_template": "/home/caitianhao/cacti/cache.cfg",
+    "cacti_template_sha256": "e1f7663eeb41571f8687bf7f9bbff652e7929875b59e8b95246fc646e9e07818",
+    "liberty": "/home/caitianhao/proj/chipyard/build/xdna2-area-45nm/tech/NangateOpenCellLibrary_typical.lib",
+    "liberty_area_scale_to_um2": 1.0,
+    "liberty_sha256": "8d540a4d4cf6d09d27c87ad067857a9c0c2eeb023ab7a56e058cd3113db4e9b1",
+    "oss_cad_suite_release": "20261112",
+    "yosys_engine_sha256": "965a667047168dd80a9d65a572572cb3b17bf5bfdcdde127d8888374cf7879cd",
+    "yosys_executable_sha256": "7c3e3396b38c129dd7485be5a0a0f0da8e495a94c8fd486059e3bea043a588d6",
+    "yosys_version": "Yosys 0.70+385 (git sha1 098e46a36, Release, Clang /usr/bin/clang++ 21.1.8)"
+  },
+  "assumptions": [
+    "Logic is Liberty standard-cell area; SRAM is CACTI physical-macro area, each instance counted once.",
+    "Hierarchy is preserved; remaining small RTL memories/queues are mapped to standard cells.",
+    "Verification-only assert/assume/cover cells and their dead cones are removed before technology mapping.",
+    "CACTI ITRS HP SRAM and Nangate45 logic are separate predictive models, not one calibrated foundry PDK.",
+    "CACTI does not explicitly model the generated byte-write-mask circuitry; masks remain a macro-model approximation.",
+    "Sum excludes placement whitespace, routing, clock-tree synthesis, power grid, pads and external host infrastructure.",
+    "ABC delay target, if supplied, is a mapping hint; no timing closure or macro timing integration is performed.",
+    "AIETile includes a 32-lane FP32 unit, an 8x1024-bit flop vector register file, command scoreboard and bank arbitration sharing Gemmini SRAM. Instruction fetch/decode and shuffle networks are external."
+  ],
+  "validation": {
+    "all_per_block_sums_match": true,
+    "major_partition_matches_array": true,
+    "detailed_partition_matches_array": true,
+    "sram_macros": 320,
+    "sram_bytes": 8388608,
+    "new_synthesis_or_simulation_run": false
+  }
+}

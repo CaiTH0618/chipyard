@@ -1,0 +1,11 @@
+{
+  "checks": 19,
+  "cycles": 2049,
+  "max_external_pending": 64,
+  "max_global_pending": 9,
+  "dual_local_cycles": 229,
+  "passed": true,
+  "software_tests_run": false,
+  "rtl": "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2MemTileConfig",
+  "output": "/home/caitianhao/proj/chipyard/build/xdna2-memtile-rtl-check"
+}

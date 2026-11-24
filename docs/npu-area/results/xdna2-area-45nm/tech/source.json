@@ -1,0 +1,8 @@
+{
+  "cell_area_unit": "um^2",
+  "corner": "typical, 1.1 V, 25 C",
+  "repository": "https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts",
+  "revision": "23341145f0fc92a522de26d5244a4a0013818f97",
+  "sha256": "8d540a4d4cf6d09d27c87ad067857a9c0c2eeb023ab7a56e058cd3113db4e9b1",
+  "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD-flow-scripts/23341145f0fc92a522de26d5244a4a0013818f97/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib"
+}

@@ -1,3 +1,4 @@
+# Local build trees, including XDNA 2 RTL checks and area synthesis.
 /build
 
 bootrom/*
@@ -7,6 +8,10 @@ target
 *.jar
 *.stamp
 *.vcd
+*.fst
+*.vvp
+__pycache__/
+*.pyc
 *.swp
 *.swo
 *.log

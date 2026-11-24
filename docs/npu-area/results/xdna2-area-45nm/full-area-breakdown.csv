@@ -1,0 +1,39 @@
+block,component,kind,per_block_mm2,instances,array_mm2,percent_of_array
+aie,INT8 MAC arithmetic (1024 units),logic,0.97922048,32,31.33505536,17.444305820249475
+aie,"INT8 fabric, alignment/transposer, PE registers and pipelines",logic,0.9001019720000001,32,28.803263104000003,16.03485056703229
+aie,Execute controller outside array/pipelines,logic,0.029945215999999997,32,0.9582469119999999,0.5334585176950422
+aie,"Scratchpad/accumulator control, adders, data paths and queues (excluding DMA engines)",logic,0.42974587599999997,32,13.751868031999999,7.655700262656893
+aie,Gemmini DMA stream reader and tracking,logic,0.07133827400000001,32,2.2828247680000002,1.270854413037554
+aie,Gemmini DMA stream writer,logic,0.04431693,32,1.41814176,0.7894831610696996
+aie,Load/store command controllers,logic,0.035377201999999996,32,1.1320704639999999,0.6302265356549134
+aie,Reservation station,logic,0.068147072,32,2.180706304,1.2140048017812701
+aie,Matmul loop command controller,logic,0.058873779999999994,32,1.8839609599999998,1.0488059064227162
+aie,Convolution loop command controller,logic,0.40150571999999995,32,12.848183039999999,7.152616505998174
+aie,Frontend TLB and protection checks,logic,0.007673035999999999,32,0.24553715199999998,0.13669116331572614
+aie,Im2Col unit,logic,0.0030316019999999996,32,0.09701126399999999,0.054006419895629584
+aie,Performance counters,logic,0.008433264,32,0.269864448,0.15023423149697643
+aie,"Other Gemmini command queues, arbiters and glue",logic,0.009264780000000084,32,0.29647296000000267,0.16504725848598714
+aie,FP32 arithmetic and its pipeline,logic,0.398455232,32,12.750567424,7.098273641791536
+aie,"FP32 vector register file, including read/write muxes",logic,0.122543008,32,3.921376256,2.1830402359285603
+aie,"SIMD command engine, scoreboard and completions",logic,0.003694207999999935,32,0.11821465599999792,0.06581040269461179
+aie,Shared SRAM bank arbitration and access glue,logic,0.010312554,32,0.330001728,0.18371280976868154
+aie,AIE scratchpad SRAM,sram,0.2151168,32,6.8837376,3.8321944065890476
+aie,AIE accumulator SRAM,sram,0.564796,32,18.073472,10.06154829406103
+mem,MemTile DMA including concurrent/byte engines and local/external buffers,logic,0.494214966,8,3.953719728,2.201045929882971
+mem,MemTile control registers,logic,0.004006758,8,0.032054064,0.017844579777306933
+mem,MemTile bank crossbar and arbitration,logic,0.017161788,8,0.137294304,0.07643209175279086
+mem,MemTile SRAM bank access logic and response registers,logic,0.013783056,8,0.110264448,0.06138450147652766
+mem,MemTile pipelined ordered global ingress,logic,0.038718694,8,0.309749552,0.17243837136062004
+mem,MemTile bank response queues,logic,0.036310064,8,0.290480512,0.16171124728948455
+mem,MemTile 512-to-256-bit width adaptation,logic,0.008444436,8,0.067555488,0.03760831372305556
+mem,MemTile request fragmentation,logic,0.000818216,8,0.006545728,0.0036440235939053395
+mem,MemTile outer FIFO adapter,logic,0.0,8,0.0,0.0
+mem,MemTile source-ID remapping,logic,0.0034005439999999997,8,0.027204351999999998,0.01514473264775223
+mem,MemTile SRAM,sram,1.530424,8,12.243392,6.815927780291493
+switch,"NoC input-buffer storage, muxes and per-VC queues",logic,0.46190368,40,18.4761472,10.285718612393927
+switch,NoC payload crossbars,logic,0.01806805,40,0.722722,0.40234119410926555
+switch,"NoC route computation, VC allocation and switch allocation",logic,0.0027645379999999995,40,0.11058151999999999,0.061561016273501606
+switch,NoC output/credit control,logic,0.0006160559999999999,40,0.024642239999999996,0.013718398315157289
+switch,NoC local terminal ingress/egress units,logic,0.038977512,40,1.55910048,0.8679552426237599
+switch,NoC local TileLink packet interface,logic,0.0064398599999999995,40,0.2575944,0.14340346425300432
+switch,NoC remaining input-unit/router state and control,logic,0.04298772800000006,40,1.7195091200000023,0.9572551446096471

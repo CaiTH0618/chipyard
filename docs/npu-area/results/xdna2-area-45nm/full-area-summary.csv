@@ -1,0 +1,12 @@
+block,component,kind,per_block_mm2,instances,array_mm2,percent_of_array
+aie,"INT8 systolic array, alignment/transposer and pipelines",logic,1.879322452,32,60.138318464,33.47915638728177
+aie,"Other Gemmini logic: DMA, storage control, scheduling and command loops",logic,1.1676527519999997,32,37.36488806399999,20.801129177510578
+aie,FP32 arithmetic and its pipeline,logic,0.398455232,32,12.750567424,7.098273641791536
+aie,"FP32 vector register file, including read/write muxes",logic,0.122543008,32,3.921376256,2.1830402359285603
+aie,"SIMD command engine, scoreboard and completions",logic,0.003694207999999935,32,0.11821465599999792,0.06581040269461179
+aie,Shared SRAM bank arbitration and access glue,logic,0.010312554,32,0.330001728,0.18371280976868154
+aie,AIE scratchpad SRAM,sram,0.2151168,32,6.8837376,3.8321944065890476
+aie,AIE accumulator SRAM,sram,0.564796,32,18.073472,10.06154829406103
+mem,"MemTile DMA, control, bank interfaces and network adapters",logic,0.616858522,8,4.934868176,2.747253791504414
+mem,MemTile SRAM,sram,1.530424,8,12.243392,6.815927780291493
+switch,NoC router pairs and local protocol interfaces,logic,0.571757424,40,22.870296959999997,12.731953072578259

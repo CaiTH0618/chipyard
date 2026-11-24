@@ -1,0 +1,70 @@
+{
+  "technology_nm": 45,
+  "total_area_mm2": 179.62913332800002,
+  "rows": [
+    {
+      "component": "Core",
+      "module": "ME",
+      "number": "32",
+      "area_mm2": 60.138318464,
+      "percent": 33.47915638728177
+    },
+    {
+      "component": "Core",
+      "module": "VE",
+      "number": "32",
+      "area_mm2": 16.790158335999998,
+      "percent": 9.347124280414707
+    },
+    {
+      "component": "Core",
+      "module": "SRAM",
+      "number": "32 \u00d7 128 KiB",
+      "area_mm2": 24.9572096,
+      "percent": 13.893742700650076
+    },
+    {
+      "component": "Core",
+      "module": "others",
+      "number": "/",
+      "area_mm2": 37.69488979200001,
+      "percent": 20.98484198727927
+    },
+    {
+      "component": "L2",
+      "module": "L2 SRAM",
+      "number": "8 \u00d7 512 KiB",
+      "area_mm2": 12.243392,
+      "percent": 6.815927780291493
+    },
+    {
+      "component": "L2",
+      "module": "others",
+      "number": "/",
+      "area_mm2": 4.934868176,
+      "percent": 2.747253791504414
+    },
+    {
+      "component": "NoC",
+      "module": "Switch",
+      "number": "5 \u00d7 8",
+      "area_mm2": 22.870296959999997,
+      "percent": 12.731953072578259
+    }
+  ],
+  "source": "area-report.json",
+  "source_sha256": "654652fad4e5a3d41b83f638dda7d6e831a09383af1d9979372b6709a3df1a47",
+  "definitions": {
+    "ME": "INT8 MeshWithDelays including MACs, alignment, transpose and pipelines",
+    "VE": "Complete FP32SimdEngine including arithmetic, vector registers and control",
+    "Core others": "All remaining AIETile logic, including Gemmini DMA/control and shared-memory arbitration",
+    "L2 others": "All MemTile logic, including concurrent/byte DMA, flop buffers, ordered ingress, bank and TL adapters",
+    "NoC": "40 copies of the interior compute switch; boundary and memory-switch differences are not included in this proxy."
+  },
+  "mem_dma_profile": {
+    "mem_dma_buffer_bytes": 4096,
+    "mem_dma_in_flight": 64,
+    "mem_dma_local_in_flight": 16,
+    "mem_dma_local_ports": 2
+  }
+}

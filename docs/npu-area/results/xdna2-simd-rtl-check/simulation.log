@@ -1,0 +1,2 @@
+SIMD_INTEGRATION_PASS commands=29 cycles=217
+/home/caitianhao/proj/chipyard/build/xdna2-simd-rtl-check/tb.sv:365: $finish called at 2220000 (1ps)

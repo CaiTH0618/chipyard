@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "software_workload_run": false,
+  "rtl_directory": "/home/caitianhao/proj/chipyard/sims/verilator/generated-src/chipyard.xdna2.Xdna2AreaHarness.Xdna2AIETileConfig",
+  "checks": [
+    "native SRAM ports and masks",
+    "all accumulator sub-banks",
+    "four-beat vector loads/stores",
+    "32-lane FP32 FMA/MUL/ADD/SUB and register writeback",
+    "one independent vector/cycle",
+    "RAW/WAW hazards",
+    "Gemmini priority on a shared bank",
+    "parallel access to different banks",
+    "completion backpressure and credit exhaustion",
+    "invalid commands have no data side effects"
+  ],
+  "result": "SIMD_INTEGRATION_PASS commands=29 cycles=217\n/home/caitianhao/proj/chipyard/build/xdna2-simd-rtl-check/tb.sv:365: $finish called at 2220000 (1ps)"
+}

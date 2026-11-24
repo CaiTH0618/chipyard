@@ -1,0 +1,2 @@
+PASS DeSC MemTile RTL cycles=1745 weighted_bursts=32 weighted_decoder=8 previously_committed_decoder=1 inference_after_pause=96 peak_decoder_in_flight=16 inference_bytes=8192 decoder_bytes=5632
+/home/caitianhao/proj/chipyard/build/xdna2-memtile-desc-rtl-check/tb.sv:396: $finish called at 17506000 (1ps)

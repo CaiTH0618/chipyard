@@ -1,0 +1,2 @@
+# Preserve the original bytes of tool outputs, including CSV line endings.
+* -text

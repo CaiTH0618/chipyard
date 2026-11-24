@@ -1,0 +1,647 @@
+{
+  "instance_name": "InterconnectSwitch",
+  "module_name": "InterconnectSwitch",
+  "instances": [
+    {
+      "instance_name": "terminal_router",
+      "module_name": "Router",
+      "instances": [
+        {
+          "instance_name": "input_unit_0_from_43",
+          "module_name": "InputUnit",
+          "instances": [
+            {
+              "instance_name": "input_buffer",
+              "module_name": "InputBuffer",
+              "instances": [
+                {
+                  "instance_name": "mem_ext",
+                  "module_name": "mem_8x579",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_0",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_1",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_2",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_3",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_4",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                }
+              ]
+            },
+            {
+              "instance_name": "route_arbiter",
+              "module_name": "Arbiter5_RouteComputerReq",
+              "instances": []
+            },
+            {
+              "instance_name": "salloc_arb",
+              "module_name": "SwitchArbiter",
+              "instances": []
+            }
+          ]
+        },
+        {
+          "instance_name": "ingress_unit_1_from_105",
+          "module_name": "IngressUnit",
+          "instances": [
+            {
+              "instance_name": "route_buffer",
+              "module_name": "Queue2_Flit",
+              "instances": [
+                {
+                  "instance_name": "ram_ext",
+                  "module_name": "ram_2x607",
+                  "instances": []
+                }
+              ]
+            },
+            {
+              "instance_name": "route_q",
+              "module_name": "Queue2_RouteComputerResp",
+              "instances": [
+                {
+                  "instance_name": "ram_ext",
+                  "module_name": "ram_2x10",
+                  "instances": []
+                }
+              ]
+            },
+            {
+              "instance_name": "vcalloc_buffer",
+              "module_name": "Queue2_Flit",
+              "instances": [
+                {
+                  "instance_name": "ram_ext",
+                  "module_name": "ram_2x607",
+                  "instances": []
+                }
+              ]
+            },
+            {
+              "instance_name": "vcalloc_q",
+              "module_name": "Queue1_VCAllocResp",
+              "instances": []
+            }
+          ]
+        },
+        {
+          "instance_name": "ingress_unit_2_from_106",
+          "module_name": "IngressUnit_1",
+          "instances": []
+        },
+        {
+          "instance_name": "ingress_unit_3_from_107",
+          "module_name": "IngressUnit_1",
+          "instances": []
+        },
+        {
+          "instance_name": "ingress_unit_4_from_135",
+          "module_name": "IngressUnit_1",
+          "instances": []
+        },
+        {
+          "instance_name": "ingress_unit_5_from_136",
+          "module_name": "IngressUnit_4",
+          "instances": [
+            {
+              "instance_name": "route_buffer",
+              "module_name": "Queue2_Flit",
+              "instances": [
+                {
+                  "instance_name": "ram_ext",
+                  "module_name": "ram_2x607",
+                  "instances": []
+                }
+              ]
+            },
+            {
+              "instance_name": "route_q",
+              "module_name": "Queue2_RouteComputerResp",
+              "instances": [
+                {
+                  "instance_name": "ram_ext",
+                  "module_name": "ram_2x10",
+                  "instances": []
+                }
+              ]
+            },
+            {
+              "instance_name": "vcalloc_buffer",
+              "module_name": "Queue2_Flit",
+              "instances": [
+                {
+                  "instance_name": "ram_ext",
+                  "module_name": "ram_2x607",
+                  "instances": []
+                }
+              ]
+            },
+            {
+              "instance_name": "vcalloc_q",
+              "module_name": "Queue1_VCAllocResp",
+              "instances": []
+            }
+          ]
+        },
+        {
+          "instance_name": "output_unit_0_to_43",
+          "module_name": "OutputUnit",
+          "instances": []
+        },
+        {
+          "instance_name": "egress_unit_1_to_70",
+          "module_name": "EgressUnit",
+          "instances": [
+            {
+              "instance_name": "q",
+              "module_name": "Queue3_EgressFlit",
+              "instances": [
+                {
+                  "instance_name": "ram_ext",
+                  "module_name": "ram_3x2",
+                  "instances": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "instance_name": "egress_unit_2_to_71",
+          "module_name": "EgressUnit_1",
+          "instances": [
+            {
+              "instance_name": "q",
+              "module_name": "Queue3_EgressFlit_1",
+              "instances": [
+                {
+                  "instance_name": "ram_ext",
+                  "module_name": "ram_3x579",
+                  "instances": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "instance_name": "egress_unit_3_to_95",
+          "module_name": "EgressUnit_2",
+          "instances": [
+            {
+              "instance_name": "q",
+              "module_name": "Queue3_EgressFlit_1",
+              "instances": [
+                {
+                  "instance_name": "ram_ext",
+                  "module_name": "ram_3x579",
+                  "instances": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "instance_name": "egress_unit_4_to_96",
+          "module_name": "EgressUnit",
+          "instances": [
+            {
+              "instance_name": "q",
+              "module_name": "Queue3_EgressFlit",
+              "instances": [
+                {
+                  "instance_name": "ram_ext",
+                  "module_name": "ram_3x2",
+                  "instances": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "instance_name": "egress_unit_5_to_97",
+          "module_name": "EgressUnit",
+          "instances": [
+            {
+              "instance_name": "q",
+              "module_name": "Queue3_EgressFlit",
+              "instances": [
+                {
+                  "instance_name": "ram_ext",
+                  "module_name": "ram_3x2",
+                  "instances": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "instance_name": "switch",
+          "module_name": "Switch",
+          "instances": []
+        },
+        {
+          "instance_name": "switch_allocator",
+          "module_name": "SwitchAllocator",
+          "instances": [
+            {
+              "instance_name": "arbs_0",
+              "module_name": "SwitchArbiter_1",
+              "instances": []
+            },
+            {
+              "instance_name": "arbs_1",
+              "module_name": "SwitchArbiter_1",
+              "instances": []
+            },
+            {
+              "instance_name": "arbs_2",
+              "module_name": "SwitchArbiter_1",
+              "instances": []
+            },
+            {
+              "instance_name": "arbs_3",
+              "module_name": "SwitchArbiter_1",
+              "instances": []
+            },
+            {
+              "instance_name": "arbs_4",
+              "module_name": "SwitchArbiter_1",
+              "instances": []
+            },
+            {
+              "instance_name": "arbs_5",
+              "module_name": "SwitchArbiter_1",
+              "instances": []
+            }
+          ]
+        },
+        {
+          "instance_name": "vc_allocator",
+          "module_name": "RotatingSingleVCAllocator",
+          "instances": []
+        },
+        {
+          "instance_name": "plusarg_reader",
+          "module_name": "plusarg_reader",
+          "instances": []
+        }
+      ]
+    },
+    {
+      "instance_name": "mesh_router",
+      "module_name": "Router_1",
+      "instances": [
+        {
+          "instance_name": "input_unit_0_from_3",
+          "module_name": "InputUnit_1",
+          "instances": [
+            {
+              "instance_name": "input_buffer",
+              "module_name": "InputBuffer",
+              "instances": [
+                {
+                  "instance_name": "mem_ext",
+                  "module_name": "mem_8x579",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_0",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_1",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_2",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_3",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_4",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                }
+              ]
+            },
+            {
+              "instance_name": "route_arbiter",
+              "module_name": "Arbiter5_RouteComputerReq",
+              "instances": []
+            },
+            {
+              "instance_name": "salloc_arb",
+              "module_name": "SwitchArbiter_7",
+              "instances": []
+            }
+          ]
+        },
+        {
+          "instance_name": "input_unit_1_from_42",
+          "module_name": "InputUnit_2",
+          "instances": [
+            {
+              "instance_name": "input_buffer",
+              "module_name": "InputBuffer_2",
+              "instances": [
+                {
+                  "instance_name": "mem_ext",
+                  "module_name": "mem_10x579",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_0",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_1",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_2",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_3",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_4",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                }
+              ]
+            },
+            {
+              "instance_name": "route_arbiter",
+              "module_name": "Arbiter5_RouteComputerReq",
+              "instances": []
+            },
+            {
+              "instance_name": "salloc_arb",
+              "module_name": "SwitchArbiter_7",
+              "instances": []
+            }
+          ]
+        },
+        {
+          "instance_name": "input_unit_2_from_44",
+          "module_name": "InputUnit_3",
+          "instances": [
+            {
+              "instance_name": "input_buffer",
+              "module_name": "InputBuffer",
+              "instances": [
+                {
+                  "instance_name": "mem_ext",
+                  "module_name": "mem_8x579",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_0",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_1",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_2",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_3",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_4",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                }
+              ]
+            },
+            {
+              "instance_name": "route_arbiter",
+              "module_name": "Arbiter5_RouteComputerReq",
+              "instances": []
+            },
+            {
+              "instance_name": "salloc_arb",
+              "module_name": "SwitchArbiter_7",
+              "instances": []
+            }
+          ]
+        },
+        {
+          "instance_name": "input_unit_3_from_51",
+          "module_name": "InputUnit_4",
+          "instances": [
+            {
+              "instance_name": "input_buffer",
+              "module_name": "InputBuffer_4",
+              "instances": [
+                {
+                  "instance_name": "mem_ext",
+                  "module_name": "mem_2x579",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_0",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_1",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_2",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_3",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                },
+                {
+                  "instance_name": "qs_4",
+                  "module_name": "Queue1_BaseFlit",
+                  "instances": []
+                }
+              ]
+            },
+            {
+              "instance_name": "route_arbiter",
+              "module_name": "Arbiter5_RouteComputerReq",
+              "instances": []
+            },
+            {
+              "instance_name": "salloc_arb",
+              "module_name": "SwitchArbiter_7",
+              "instances": []
+            }
+          ]
+        },
+        {
+          "instance_name": "output_unit_0_to_3",
+          "module_name": "OutputUnit",
+          "instances": []
+        },
+        {
+          "instance_name": "output_unit_1_to_42",
+          "module_name": "OutputUnit",
+          "instances": []
+        },
+        {
+          "instance_name": "output_unit_2_to_44",
+          "module_name": "OutputUnit_3",
+          "instances": []
+        },
+        {
+          "instance_name": "output_unit_3_to_51",
+          "module_name": "OutputUnit",
+          "instances": []
+        },
+        {
+          "instance_name": "switch",
+          "module_name": "Switch_1",
+          "instances": []
+        },
+        {
+          "instance_name": "switch_allocator",
+          "module_name": "SwitchAllocator_1",
+          "instances": [
+            {
+              "instance_name": "arbs_0",
+              "module_name": "SwitchArbiter_11",
+              "instances": []
+            },
+            {
+              "instance_name": "arbs_1",
+              "module_name": "SwitchArbiter_11",
+              "instances": []
+            },
+            {
+              "instance_name": "arbs_2",
+              "module_name": "SwitchArbiter_11",
+              "instances": []
+            },
+            {
+              "instance_name": "arbs_3",
+              "module_name": "SwitchArbiter_11",
+              "instances": []
+            }
+          ]
+        },
+        {
+          "instance_name": "vc_allocator",
+          "module_name": "RotatingSingleVCAllocator_1",
+          "instances": []
+        },
+        {
+          "instance_name": "route_computer",
+          "module_name": "RouteComputer_1",
+          "instances": []
+        },
+        {
+          "instance_name": "plusarg_reader",
+          "module_name": "plusarg_reader",
+          "instances": []
+        }
+      ]
+    },
+    {
+      "instance_name": "nif",
+      "module_name": "TLMasterToNoC",
+      "instances": [
+        {
+          "instance_name": "a",
+          "module_name": "TLAToNoC",
+          "instances": [
+            {
+              "instance_name": "q",
+              "module_name": "Queue1_TLBundleA_a32d512s11k2z3c",
+              "instances": []
+            }
+          ]
+        },
+        {
+          "instance_name": "b",
+          "module_name": "TLBFromNoC",
+          "instances": []
+        },
+        {
+          "instance_name": "d",
+          "module_name": "TLDFromNoC",
+          "instances": []
+        }
+      ]
+    },
+    {
+      "instance_name": "nif_1",
+      "module_name": "TLSlaveToNoC",
+      "instances": [
+        {
+          "instance_name": "a",
+          "module_name": "TLAFromNoC",
+          "instances": []
+        },
+        {
+          "instance_name": "c",
+          "module_name": "TLCFromNoC",
+          "instances": []
+        },
+        {
+          "instance_name": "d",
+          "module_name": "TLDToNoC",
+          "instances": [
+            {
+              "instance_name": "q",
+              "module_name": "Queue1_TLBundleD_a32d512s11k2z3c",
+              "instances": []
+            }
+          ]
+        },
+        {
+          "instance_name": "e",
+          "module_name": "TLEFromNoC",
+          "instances": []
+        }
+      ]
+    }
+  ]
+}

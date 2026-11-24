@@ -1,0 +1,2 @@
+PASS MemTile RTL checks=19 cycles=2049 max_external_pending=64 max_global_pending=9 dual_local_cycles=229
+/home/caitianhao/proj/chipyard/build/xdna2-memtile-rtl-check/tb.sv:352: $finish called at 20546000 (1ps)
