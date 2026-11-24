@@ -6,6 +6,12 @@ AIE and switch measurements and the matched naive and DeSC Mem Tile run.
 Original tool outputs are preserved byte for byte. Git preserves the original
 line endings so that the recorded checksums hold after checkout.
 
+The archived Mem Tile measurements and RTL checks use ActiveSPM commit
+`19648f4891bff046ee74043c4db08c94e38a5be2`. Chipyard commit
+`73a089f3c4997eb7de4746fa3628b1261a873577` pins that revision and contains the
+matching area workflow. The later MMIO progress fix changes the generated DMA
+logic and requires a new Mem Tile measurement for updated area figures.
+
 | Archive | Contents |
 | --- | --- |
 | [xdna2-area-45nm](results/xdna2-area-45nm/) | [Combined area report](results/xdna2-area-45nm/area-report.md), raw statistics for all seven blocks, the current [naive NPU breakdown](results/xdna2-area-45nm/npu-area-table.md), and the detailed CSV breakdown and plotting script. |

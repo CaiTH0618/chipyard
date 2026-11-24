@@ -16,6 +16,7 @@ DESC_TASKS = r"""
 integer decoder_issued=0;
 integer decoder_before, infer_before, weighted_decoder, before_release, paused_decoder, paused_inference;
 integer pause_external=0, max_decoder_credit=0;
+reg [63:0] inference_bytes;
 
 always @(posedge clock) if (!reset) begin
   if (io_dma_a_valid && io_dma_a_ready && io_dma_a_bits_address >= 32'h80008000)
@@ -119,9 +120,14 @@ DESC_SCENARIO = r"""
     if (memory[32'hc000+j]!==memory[32'h8000+j]) $fatal(1,"decode STORE data mismatch %0d",j);
   if (max_decoder_credit!=16 || io_desc_inFlightBursts_1!=0 || io_desc_decodeError)
     $fatal(1,"decode credit return failed");
+  inference_bytes=io_desc_completedBytes_0;
+  check_store_prefix();
+  // The sideband counts every successful write, including writes past a gap.
+  if (io_desc_completedBytes_0!=inference_bytes+640 || io_desc_completedBytes_1!=5632)
+    $fatal(1,"DeSC sideband counters no longer count acknowledged bytes by class");
   $display("PASS DeSC MemTile RTL cycles=%0d weighted_bursts=32 weighted_decoder=%0d previously_committed_decoder=%0d inference_after_pause=%0d peak_decoder_in_flight=%0d inference_bytes=%0d decoder_bytes=%0d",
     cycle,weighted_decoder,pause_external,paused_inference,max_decoder_credit,
-    io_desc_completedBytes_0,io_desc_completedBytes_1);
+    inference_bytes,io_desc_completedBytes_1);
   $finish;
 end
 endmodule
@@ -160,7 +166,8 @@ reg [31:0] pending_address[0:63];
 reg [2:0] pending_opcode[0:63], pending_size[0:63];
 reg pending_bad[0:63];
 reg requests_enabled=1, responses_enabled=1, response_held=0, inject_error=0;
-reg [31:0] fault_address=0;
+reg block_response=0;
+reg [31:0] fault_address=0, blocked_address=0;
 reg [63:0] value;
 reg [511:0] data_value, expected_value;
 
@@ -214,7 +221,9 @@ always @(negedge clock) if (!reset) begin
   if (!response_held) begin
     io_dma_d_valid=0; pick=-1;
     if (responses_enabled && cycle%5 != 0)
-      for (response_index=0;response_index<64;response_index=response_index+1) if (pending[response_index]) pick=response_index;
+      for (response_index=0;response_index<64;response_index=response_index+1)
+        if (pending[response_index] && (!block_response || pending_address[response_index]!=blocked_address))
+          pick=response_index;
     if (pick>=0) begin
       response_held=1; io_dma_d_valid=1;
       io_dma_d_bits_source=pick;
@@ -287,6 +296,33 @@ task finish_dma(input integer expected_error, input integer expected_bytes);
       $fatal(1,"DMA completion mismatch status=%h bytes=%0d err=%0d expected=%0d/%0d",status,progress,error_code,expected_bytes,expected_error);
     if (expected_error==0 && !status[1]) $fatal(1,"missing DONE");
     checks=checks+1;
+  end
+endtask
+
+task check_store_prefix;
+  integer failed_burst;
+  reg [63:0] status, progress;
+  begin
+    // Hold the first acknowledgment while the three later writes finish.
+    responses_enabled=0; block_response=1; blocked_address=32'h80005000;
+    launch(1,32'h5000,0,256);
+    while (pending_now<4) begin @(posedge clock); #1; end
+    responses_enabled=1;
+    while (pending_now!=1) begin @(posedge clock); #1; end
+    ctrl(0,32,0,status); ctrl(0,40,0,progress);
+    if (!status[0] || progress!==0) $fatal(1,"live MMIO progress crossed an unacknowledged write");
+    checks=checks+1;
+    block_response=0; finish_dma(0,256);
+
+    // Only the bytes before the first failed write count toward the prefix.
+    inject_error=1;
+    for (failed_burst=0;failed_burst<=2;failed_burst=failed_burst+2) begin
+      fault_address=32'h80005000+failed_burst*64; responses_enabled=0;
+      launch(1,32'h5000,0,256);
+      while (pending_now<4) begin @(posedge clock); #1; end
+      responses_enabled=1; finish_dma(5,failed_burst*64);
+    end
+    inject_error=0;
   end
 endtask
 
@@ -402,8 +438,9 @@ endtask
   fault_address=32'h8000e100;
   responses_enabled=0; launch(1,32'he100,0,4096);
   while (pending_now<64) begin @(posedge clock); #1; end
-  responses_enabled=1; finish_dma(5,4032);
+  responses_enabled=1; finish_dma(5,0);
   inject_error=0;
+  check_store_prefix();
   launch(0,32'he000,32'h6000,64); finish_dma(0,64);
   check_sram_copy(32'h6000,32'he000,64,64);
   if (dual_local_cycles==0) $fatal(1,"private DMA lanes never issued concurrently");

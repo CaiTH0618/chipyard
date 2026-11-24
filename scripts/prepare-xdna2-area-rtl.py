@@ -128,7 +128,10 @@ def prepare(build: Path, top: str) -> None:
         "InterconnectSwitch": {"Gemmini": 0, "MacUnit": 0, "ActiveSPM": 0, "Router": 2},
     }[top]
     if top == "MemTile":
-        expected["ActiveSPMDeSCAdmission"] = int(profile.get("desc_queue_depth", 0) > 0)
+        desc_depth = profile.get("desc_queue_depth", 0)
+        expected["ActiveSPMDeSCAdmission"] = int(desc_depth > 0)
+        if desc_depth:
+            expected[f"Queue{desc_depth}_ActiveSPMDeSCBurst"] = 2
     expected.update(RocketTile=0, ReRoCCManagerTile=0, TLMonitor=0)
     for name, count in expected.items():
         if counts[name] != count:
@@ -137,13 +140,6 @@ def prepare(build: Path, top: str) -> None:
     if expected_sram is not None and sram_bytes != expected_sram:
         raise ValueError(f"{top}: expected {expected_sram} SRAM bytes, found {sram_bytes}")
     if top == "MemTile":
-        if profile.get("desc_queue_depth", 0):
-            fast = next(node for node in hierarchy["instances"] if node["instance_name"] == "active")
-            dma = next(node for node in fast["instances"] if node["instance_name"] == "dma")
-            fast = next(node for node in dma["instances"] if node["instance_name"] == "fast")
-            direct = {node["instance_name"] for node in fast["instances"]}
-            if not {"inference", "decoder", "admission"} <= direct:
-                raise ValueError("DeSC DMA must include both request queues and the admission unit")
         dma = (build / "gen-collateral/ActiveSPMConcurrentDMA.sv").read_text()
         data_regs = re.findall(r"\breg\s+\[255:0\]\s+data_[01]_\d+\s*;", dma)
         if len(data_regs) != 128:
