@@ -7,6 +7,7 @@ Project Introduction
   - `./generators/gemmini`
   - `./generators/gemmini/software/gemmini-rocc-tests`
   - `./generators/activespm`
+  - `./generators/cnpu`
   - `./sims/firesim`
 
 Project Usage

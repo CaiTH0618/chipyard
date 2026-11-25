@@ -157,3 +157,6 @@
 [submodule "generators/activespm"]
 	path = generators/activespm
 	url = https://github.com/CaiTH0618/activespm.git
+[submodule "generators/cnpu"]
+	path = generators/cnpu
+	url = https://github.com/CaiTH0618/cnpu.git

@@ -41,6 +41,7 @@ class DigitalTop(implicit p: Parameters) extends ChipyardSystem
   with constellation.soc.CanHaveGlobalNoC // Support instantiating a global NoC interconnect
   with rerocc.CanHaveReRoCCTiles // Support tiles that instantiate rerocc-attached accelerators
   with activespm.CanHavePeripheryActiveSPM // Enables optional ActiveSPM instances
+  with cnpu.CanHavePeripheryCNPU // Enables the optional CNPU peripheral
 {
   override lazy val module = new DigitalTopModule(this)
 }

@@ -158,7 +158,7 @@ lazy val chipyard = (project in file("generators/chipyard"))
     dsptools, rocket_dsp_utils,
     gemmini, icenet, tracegen, cva6, nvdla, sodor, ibex, fft_generator,
     constellation, mempress, barf, shuttle, caliptra_aes, rerocc,
-    compressacc, saturn, ara, firrtl2_bridge, vexiiriscv, activespm)
+    compressacc, saturn, ara, firrtl2_bridge, vexiiriscv, activespm, cnpu)
   .settings(libraryDependencies ++= rocketLibDeps.value)
   .settings(
     libraryDependencies ++= Seq(
@@ -184,6 +184,11 @@ lazy val activespm = (project in file("generators/activespm"))
   .settings(libraryDependencies += "edu.berkeley.cs" %% "chiseltest" % chiselTestVersion % Test)
   .settings(Test / parallelExecution := false)
   .settings(scalaTestSettings)
+  .settings(commonSettings)
+
+lazy val cnpu = (project in file("generators/cnpu"))
+  .dependsOn(rocketchip)
+  .settings(libraryDependencies ++= rocketLibDeps.value)
   .settings(commonSettings)
 
 lazy val barf = (project in file("generators/bar-fetchers"))
