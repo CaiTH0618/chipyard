@@ -47,7 +47,7 @@ git -C generators/rocket-chip switch -c npu/<topic>
 git -C generators/rocket-chip push -u origin npu/<topic>
 ```
 
-Gemmini、`gemmini-rocc-tests`、ActiveSPM 和 FireSim 使用相同流程，并替换为相应的路径和 `CaiTH0618` 仓库 URL。每个仓库的权限独立判断：只对具有 Collaborator 权限的仓库使用本流程。
+Gemmini、`gemmini-rocc-tests`、ActiveSPM、CNPU 和 FireSim 使用相同流程，并替换为相应的路径和 `CaiTH0618` 仓库 URL。每个仓库的权限独立判断：只对具有 Collaborator 权限的仓库使用本流程。
 
 ### 不是 `CaiTH0618` 相关仓库的 Collaborator
 
@@ -69,7 +69,7 @@ git -C generators/rocket-chip switch -c npu/<topic>
 git -C generators/rocket-chip push -u origin npu/<topic>
 ```
 
-Gemmini、`gemmini-rocc-tests`、ActiveSPM 和 FireSim 使用相同流程，并替换为相应的路径和个人仓库 URL。
+Gemmini、`gemmini-rocc-tests`、ActiveSPM、CNPU 和 FireSim 使用相同流程，并替换为相应的路径和个人仓库 URL。
 
 非 Collaborator 的 submodule commit 只存在于个人 fork，因此还必须在个人功能分支中修改父仓库的 `.gitmodules`，让其指向个人 fork 的 HTTPS URL。例如修改 Rocket Chip 时，在顶层 Chipyard 执行：
 
