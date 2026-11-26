@@ -189,6 +189,8 @@ lazy val activespm = (project in file("generators/activespm"))
 lazy val cnpu = (project in file("generators/cnpu"))
   .dependsOn(rocketchip)
   .settings(libraryDependencies ++= rocketLibDeps.value)
+  .settings(libraryDependencies += "edu.berkeley.cs" %% "chiseltest" % chiselTestVersion % Test)
+  .settings(scalaTestSettings)
   .settings(commonSettings)
 
 lazy val barf = (project in file("generators/bar-fetchers"))
